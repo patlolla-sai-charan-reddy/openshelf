@@ -6,7 +6,7 @@
 //   • Retailer product pages' og:image + og/product price meta (Nike, Puma, Converse, IKEA, KitchenAid, Garmin, Samsung, …)
 // Every image URL is verified (browser UA, content-type image/*), then everything runs through validate.js.
 // Usage: node scripts/build-catalog.mjs [--dry-run]   (env COLLECT_TOP=n overrides how many extra products per T() entry)
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -184,9 +184,14 @@ async function fromOg(e) {
 
 // ---------- Main ----------
 const byCat = {}, seen = new Set();
+const previous = existsSync(join(ROOT, 'data')) ? readdirSync(join(ROOT, 'data')).filter(f => f.endsWith('.json')).flatMap(f => JSON.parse(readFileSync(join(ROOT, 'data', f), 'utf8'))) : [];
 for (const e of SPEC) {
   let items = [];
-  try { items = e.kind === 'shopify' ? await fromShopify(e) : e.kind === 'shopify-top' ? await fromShopifyTop(e) : await fromOg(e); } catch (err) { console.warn(`  FAIL ${e.kind} ${e.host || e.url}: ${err.message}`); continue; }
+  try { items = e.kind === 'shopify' ? await fromShopify(e) : e.kind === 'shopify-top' ? await fromShopifyTop(e) : await fromOg(e); }
+  catch (err) {   // retailer blocked this runner (403) / down → reuse the record collected on a previous run, if any
+    const kept = previous.find(p => p.url === e.url); if (kept) { console.warn(`  KEEP ${e.host || e.url}: ${err.message} — reusing previous record`); items = [kept]; }
+    else { console.warn(`  FAIL ${e.kind} ${e.host || e.url}: ${err.message}`); continue; }
+  }
   for (const p of items) {
     const key = (p.category + '|' + p.brand + '|' + p.title).toLowerCase();   // colour/size variants share a title → keep the first
     if (seen.has(key)) continue; seen.add(key);
