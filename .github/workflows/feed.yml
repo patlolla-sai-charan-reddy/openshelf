@@ -1,9 +1,9 @@
 name: feed-agent
-# Build-time shopping agent: refreshes /data/*.json + agents.json daily, validated by the same validate.js as admin.html.
+# Daily collector: pulls fresh products from retailers' public endpoints, validates, regenerates agents.json / index.html / discovery files, commits.
 on:
   schedule:
     - cron: '17 6 * * *'        # daily 06:17 UTC
-  workflow_dispatch:            # "Run bot now" button in admin.html hits this
+  workflow_dispatch:            # run it manually from the Actions tab
 permissions:
   contents: write
 concurrency:
@@ -17,7 +17,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Run feed agent (real source if keys present, otherwise fixtures)
+      - name: Collect products from retailer endpoints (Shopify products.json, page JSON-LD/og)
+        env:
+          COLLECT_TOP: ${{ vars.COLLECT_TOP }}
+        run: node scripts/build-catalog.mjs
+      - name: Validate, refresh index + discovery files (optional Skimlinks/Sovrn feed if key present)
         env:
           SKIMLINKS_API_KEY: ${{ secrets.SKIMLINKS_API_KEY }}
           SKIMLINKS_PRODUCT_API: ${{ vars.SKIMLINKS_PRODUCT_API }}
@@ -31,5 +35,5 @@ jobs:
           git config user.email "openshelf-bot@users.noreply.github.com"
           git add data agents.json index.html sitemap.xml robots.txt opensearch.xml openapi.json
           if git diff --cached --quiet; then echo "No catalog changes"; exit 0; fi
-          git commit -m "bot: refresh catalog $(date -u +%F) [skip ci]"
+          git commit -m "bot: daily catalog $(date -u +%F) — $(node -e 'const fs=require("fs");let n=0;for(const f of fs.readdirSync("data"))n+=JSON.parse(fs.readFileSync("data/"+f)).length;console.log(n)') products [skip ci]"
           git push

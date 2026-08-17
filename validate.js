@@ -1,6 +1,5 @@
-// validate.js — the ONE product-schema validator, shared by admin.html (browser) and the GitHub Action (Node).
-// Browser: <script src="validate.js"> exposes window.validateProducts. Node: require('./validate.js').validateProducts.
-// Anything this rejects can never be published, by a human or by the bot.
+// validate.js — the ONE product-schema validator used by the daily collector (build-catalog.mjs) and the feed agent (build-feed.mjs).
+// Node: require('./validate.js'). Also loadable in a browser as a classic script. Anything this rejects is never published.
 (function (root) {
   const FIELDS = { brand: 'string', title: 'string', price: 'number', currency: 'string', image: 'string', url: 'string', merchant: 'string', category: 'string', keywords: 'array' };
   const isHttp = s => { try { const u = new URL(s); return u.protocol === 'https:' || u.protocol === 'http:'; } catch { return false; } };
@@ -50,7 +49,7 @@
     return { id: category, name: `${name} Index`, category, products: products.length, stores: new Set(products.map(p => p.merchant)).size, keywords: kw };
   }
 
-  // Landing-page <li> for one agent + the JSON-LD DataCatalog block; used by the feed agent and admin.html to keep index.html in sync with agents.json.
+  // Landing-page <li> for one agent + the JSON-LD DataCatalog block; used by the feed agent to keep index.html in sync with agents.json.
   const agentLI = a => `<li data-a="${a.id}:${a.products || 0}:${a.stores}"><strong>${a.category}</strong> — ${a.name}: ${a.products || 0} products across ${a.stores} stores · <a href="data/${a.category}.json">JSON</a> · <a href="search.html?q=${a.category}">search</a> <progress value="1" max="1">ready</progress></li>`;
   const jsonLD = agents => '<script type="application/ld+json">\n' + JSON.stringify({ '@context': 'https://schema.org', '@graph': [
     { '@type': 'WebSite', name: 'OpenShelf', alternateName: 'OpenShelf product index for AI agents', url: './', description: 'Product search index built for AI agents: one query returns brand, title, price, image and retailer URL across dozens of stores, as HTML or JSON.', audience: { '@type': 'Audience', audienceType: 'AI agents, shopping bots, LLM assistants' }, potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: 'search.html?q={search_term_string}' }, 'query-input': 'required name=search_term_string' } },

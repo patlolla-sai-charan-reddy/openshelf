@@ -2,7 +2,7 @@
 // Build-time feed agent. Runs daily in GitHub Actions (see .github/workflows/feed.yml) or locally: `node scripts/build-feed.mjs`.
 //   • Real source: Skimlinks / Sovrn Commerce Product API   (set SKIMLINKS_API_KEY; endpoint via SKIMLINKS_PRODUCT_API)
 //   • Fallback:    the committed fixtures in /data/*.json    (no keys → demo mode; nothing is fetched)
-// Every candidate list goes through the SAME validate.js the admin dashboard uses. Invalid data is never written.
+// Runs AFTER scripts/build-catalog.mjs (the daily collector). Every candidate list goes through validate.js; invalid data is never written.
 // Also refreshes agents.json (store counts, auto-registers agents for new data files) and stamps Amazon Associates tags.
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { createRequire } from 'node:module';
@@ -131,7 +131,7 @@ for (const agent of manifest.agents) {
   agent.stores = v.stats.merchants; agent.products = v.products.length;
   report.push({ category: agent.category, source, ok: true, written: !DRY, products: v.products.length, merchants: v.stats.merchants, warnings: v.warnings.length });
 }
-// Auto-register agents for data files that have no agent yet (e.g. uploaded via admin.html on a branch).
+// Auto-register agents for data files that have no agent yet (e.g. a new category added to the collector spec).
 for (const f of readdirSync(dataDir).filter(f => f.endsWith('.json'))) {
   const category = f.replace(/\.json$/, '');
   if (manifest.agents.some(a => a.category === category)) continue;

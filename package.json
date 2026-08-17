@@ -2,15 +2,15 @@
   "name": "openshelf",
   "version": "1.0.0",
   "private": true,
-  "description": "OpenShelf — the product index for AI agents. Static, zero CSS, zero backend.",
+  "description": "OpenShelf \u2014 the product index for AI agents. Static, zero CSS, zero backend.",
   "scripts": {
     "serve": "python3 -m http.server 8765",
     "feed": "node scripts/build-feed.mjs",
     "feed:dry": "node scripts/build-feed.mjs --dry-run",
-    "mock-github": "node scripts/mock-github.mjs 8766",
-    "check": "grep -rEn '<style|style=|stylesheet|\\.css' index.html search.html admin.html app.js sw.js && exit 1 || echo 'zero CSS \u2714'",
-    "catalog": "node scripts/build-catalog.mjs",
-    "catalog:dry": "node scripts/build-catalog.mjs --dry-run"
+    "check": "grep -rEn '<style|style=|stylesheet|\\.css' index.html search.html app.js sw.js && exit 1 || echo 'zero CSS \u2714'",
+    "collect": "node scripts/build-catalog.mjs",
+    "collect:dry": "node scripts/build-catalog.mjs --dry-run",
+    "daily": "node scripts/build-catalog.mjs && node scripts/build-feed.mjs"
   },
   "license": "MIT"
 }

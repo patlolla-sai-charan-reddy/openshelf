@@ -361,5 +361,188 @@
    "skincare",
    "pores"
   ]
+ },
+ {
+  "brand": "Glossier",
+  "title": "The Glossier Icons",
+  "price": 65,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9164/7477/files/glossier-the-glossier-icons-carousel-01_6591b3e2-4bc4-4f80-bfd8-a821163caeba.png?v=1784305216&width=352&height=352&crop=center",
+  "url": "https://glossier.com/products/the-glossier-icons",
+  "merchant": "Glossier",
+  "category": "beauty",
+  "keywords": [
+   "the",
+   "glossier",
+   "icons",
+   "makeup",
+   "gls",
+   "hazmat",
+   "sub",
+   "category",
+   "balms",
+   "fragrance",
+   "sets"
+  ]
+ },
+ {
+  "brand": "Glossier",
+  "title": "The Balm Dotcom Quintet",
+  "price": 64,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9164/7477/files/glossier-balm-dotcom-quintet-carousel-01.png?v=1784569403&width=352&height=352&crop=center",
+  "url": "https://glossier.com/products/balm-dotcom-quintet",
+  "merchant": "Glossier",
+  "category": "beauty",
+  "keywords": [
+   "the",
+   "balm",
+   "dotcom",
+   "quintet",
+   "skincare",
+   "drop4",
+   "2025",
+   "endofseason",
+   "gls",
+   "sub",
+   "category",
+   "balms",
+   "lip",
+   "makeup"
+  ]
+ },
+ {
+  "brand": "Glossier",
+  "title": "The Skincare Icons",
+  "price": 72,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9164/7477/files/glossier-the-skincare-icons-carousel-01.png?v=1784297003&width=352&height=352&crop=center",
+  "url": "https://glossier.com/products/the-skincare-icons",
+  "merchant": "Glossier",
+  "category": "beauty",
+  "keywords": [
+   "the",
+   "skincare",
+   "icons",
+   "makeup",
+   "gls",
+   "pos",
+   "bundle",
+   "sub",
+   "category",
+   "sets",
+   "type",
+   "custom"
+  ]
+ },
+ {
+  "brand": "Glossier",
+  "title": "In A New York Minute Set",
+  "price": 67,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9164/7477/files/glossier-iheartny-balm-the-ny-minute-carousel-01.png?v=1783963555&width=352&height=352&crop=center",
+  "url": "https://glossier.com/products/in-a-new-york-minute",
+  "merchant": "Glossier",
+  "category": "beauty",
+  "keywords": [
+   "new",
+   "york",
+   "minute",
+   "set",
+   "makeup",
+   "gls",
+   "pos",
+   "bundle",
+   "sub",
+   "category",
+   "balms",
+   "cheek",
+   "sets"
+  ]
+ },
+ {
+  "brand": "Rare Beauty",
+  "title": "Claw Clip",
+  "price": 10,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0314/1143/7703/files/ECOMM-HAIR-CLAW-CLIP-01.jpg?v=1785198251&width=352&height=352&crop=center",
+  "url": "https://rarebeauty.com/products/claw-clip",
+  "merchant": "Rare Beauty",
+  "category": "beauty",
+  "keywords": [
+   "claw",
+   "clip",
+   "hair",
+   "accessories",
+   "badge",
+   "online",
+   "only"
+  ]
+ },
+ {
+  "brand": "Rare Beauty",
+  "title": "Soft Pinch Lip Oil Stick",
+  "price": 25,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0314/1143/7703/files/ECOMM-SP-LIP-OIL-STICK-CAP-OFF-WISH.jpg?v=1782797532&width=352&height=352&crop=center",
+  "url": "https://rarebeauty.com/products/soft-pinch-lip-oil-stick",
+  "merchant": "Rare Beauty",
+  "category": "beauty",
+  "keywords": [
+   "soft",
+   "pinch",
+   "lip",
+   "oil",
+   "stick"
+  ]
+ },
+ {
+  "brand": "Rare Beauty",
+  "title": "Soft Pinch Matte Bouncy Blush Mini",
+  "price": 16,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0314/1143/7703/files/ECOMM-MINI-SP-MATTE-BOUNCY-BLUSH-HOPE.jpg?v=1779132602&width=352&height=352&crop=center",
+  "url": "https://rarebeauty.com/products/soft-pinch-matte-bouncy-blush-mini",
+  "merchant": "Rare Beauty",
+  "category": "beauty",
+  "keywords": [
+   "soft",
+   "pinch",
+   "matte",
+   "bouncy",
+   "blush",
+   "mini",
+   "cream",
+   "non",
+   "returnable"
+  ]
+ },
+ {
+  "brand": "Nami Matcha",
+  "title": "x Fenty Beauty",
+  "price": 70,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0341/3458/9485/files/FB_SMR26_T2PRODUCT_PDP_NAMIMATCHA_HERO_1200x1500_b3b0d90f-fd85-4b51-a493-db4bc22af301.jpg?v=1785275094&width=352&height=352&crop=center",
+  "url": "https://fentybeauty.com/products/nami-matcha-x-fenty-beauty-lip-cravings-kit",
+  "merchant": "Fenty Beauty",
+  "category": "beauty",
+  "keywords": [
+   "nami",
+   "matcha",
+   "fenty",
+   "beauty",
+   "lip",
+   "cravings",
+   "kit",
+   "gloss",
+   "badge",
+   "new",
+   "hide",
+   "shopify",
+   "collective",
+   "status",
+   "hidden",
+   "nsg"
+  ]
  }
 ]

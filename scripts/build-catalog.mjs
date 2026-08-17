@@ -1,11 +1,12 @@
 #!/usr/bin/env node
-// Fixture-catalog builder (dev tool; the daily bot is scripts/build-feed.mjs). Builds data/*.json from REAL, public retailer
-// endpoints so every fixture has a correct image, price and canonical product URL:
+// Daily collector. Builds data/*.json from REAL, public retailer endpoints so every product has a correct image, price and
+// canonical product URL. Runs every morning in .github/workflows/feed.yml (then build-feed.mjs validates, refreshes agents.json,
+// index.html and the discovery files, and the workflow commits → the static host redeploys).
 //   • Shopify stores' public /products.json (Everlane, Glossier, Casper, Manduka, Kith, …)
 //   • Retailer product pages' og:image + og/product price meta (Nike, Puma, Converse, IKEA, KitchenAid, Garmin, Samsung, …)
 // Every image URL is verified (browser UA, content-type image/*), then everything runs through validate.js.
-// Usage: node scripts/build-catalog.mjs [--dry-run]
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+// Usage: node scripts/build-catalog.mjs [--dry-run]   (env COLLECT_TOP=n overrides how many extra products per T() entry)
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -52,6 +53,9 @@ const tidyTitle = (t, brand) => {
 // O(url, category, brand, title, fallbackPrice, keywords) → og:image page.
 const S = (host, merchant, category, picks, o = {}) => ({ kind: 'shopify', host, merchant, category, picks, ...o });
 const O = (url, category, merchant, brand, title, price, kw = '') => ({ kind: 'og', url, category, merchant, brand, title, price, kw });
+// T(store, merchant, category, match, take) → Shopify: collect up to `take` available products whose product_type or title matches (newest first).
+const TOP = +(process.env.COLLECT_TOP || 4);
+const T = (host, merchant, category, match, take = TOP, o = {}) => ({ kind: 'shopify-top', host, merchant, category, match, take, ...o });
 const SPEC = [
   // shoes
   O('https://www.nike.com/t/air-force-1-07-mens-shoes-jBrhbr', 'shoes', 'Nike', 'Nike', "Air Force 1 '07", 115, 'sneakers white leather classic'),
@@ -104,6 +108,25 @@ const SPEC = [
   S('www.outdoorvoices.com', 'Outdoor Voices', 'sports', ['w-jog-6-short-black', /^Zephyr 3" Short/, /^GridTek Breezy Shortsleeve/], { kw: 'running shorts activewear workout' }),
   S('www.wyze.com', 'Wyze', 'sports', [/^Wyze Scale/], { brand: 'Wyze', kw: 'smart scale fitness weight' }),
   S('www.allbirds.com', 'Allbirds', 'sports', ['womens-tree-dasher-relay'], { kw: 'running shoes trainers' }),
+  // collectors: fresh/new products per store, on top of the curated picks (dedupe by url happens in validate.js)
+  T('kith.com', 'Kith', 'shoes', /Sneakers/, TOP, { exclude: /\b(PS|TD|GS|Infant)\b/ }),
+  T('www.allbirds.com', 'Allbirds', 'shoes', /^Shoes$/),
+  T('www.everlane.com', 'Everlane', 'clothing', /Knit Tops|Denim|Shirting|Outerwear/),
+  T('www.outdoorvoices.com', 'Outdoor Voices', 'clothing', /Dresses|Leggings/),
+  T('www.skullcandy.com', 'Skullcandy', 'electronics', /Headphones|Earbuds/i, TOP, { brand: 'Skullcandy' }),
+  T('www.keychron.com', 'Keychron', 'electronics', /Keyboard/i, TOP, { brand: 'Keychron', match2: /Keyboard/ }),
+  T('www.wyze.com', 'Wyze', 'electronics', /Cam/i, TOP, { brand: 'Wyze' }),
+  T('www.brooklinen.com', 'Brooklinen', 'home', /Sheets|Duvet Covers|Towels/),
+  T('www.parachutehome.com', 'Parachute', 'home', /Sheets|Towels|Bathrobes/, TOP, { brand: 'Parachute' }),
+  T('www.glossier.com', 'Glossier', 'beauty', /Makeup|Skincare|Balms/),
+  T('www.rarebeauty.com', 'Rare Beauty', 'beauty', /Blush|Lip/i),
+  T('www.fentybeauty.com', 'Fenty Beauty', 'beauty', /Lip Gloss|Blushes/),
+  T('www.manduka.com', 'Manduka', 'sports', /Mats|Props/),
+  T('www.therabody.com', 'Therabody', 'sports', /^Theragun$/, TOP, { brand: 'Therabody' }),
+  T('www.stanley1913.com', 'Stanley', 'sports', /Tumblers|Bottles/i, TOP, { brand: 'Stanley' }),
+  T('www.melissaanddoug.com', 'Melissa & Doug', 'kids', /Puzzles|Blocks|Play/),
+  T('www.radioflyer.com', 'Radio Flyer', 'kids', /Ride-On|Wagon|Tricycle/i),
+  T('www.playosmo.com', 'Osmo', 'kids', /./, TOP, { brand: 'Osmo' }),
   // kids
   S('www.melissaanddoug.com', 'Melissa & Doug', 'kids', ['ms-rachel-bubble-bubble-pop-sort-stack-count-nesting-blocks', 'dinosaur-adventure-track-floor-puzzle', 'ms-rachel-alphabet-phonics-puzzle', /Doctor/], { kw: 'toys toddler learning wooden' }),
   S('www.radioflyer.com', 'Radio Flyer', 'kids', ['scoot-2-scooter-1', 'push-pull-walker-wagon-teddy-bear', /Classic Red Wagon/, /My 1st Balance Bike/], { kw: 'toys ride on outdoor wagon' }),
@@ -140,6 +163,14 @@ async function fromShopify(e) {
   }
   return out;
 }
+async function fromShopifyTop(e) {
+  const list = (await shopifyList(e.host)).filter(p => notBundle(p) && p.images[0] && p.variants.some(v => v.available && +v.price > 0)
+    && (e.match.test(p.product_type || '') || e.match.test(p.title)) && !(e.exclude && e.exclude.test(p.title)) && (!e.vendor || p.vendor === e.vendor))
+    .sort((a, b) => new Date(b.published_at || b.created_at) - new Date(a.published_at || a.created_at)).slice(0, e.take);
+  return list.map(p => { const brand = e.brand || p.vendor, v = p.variants.find(x => x.available && +x.price > 0);
+    return { brand, title: tidyTitle(p.title, brand), price: +v.price, currency: 'USD', image: squarify(p.images[0].src), url: `https://${e.host.replace(/^www\./, '')}/products/${p.handle}`, merchant: e.merchant, category: e.category,
+      keywords: [...words(p.title), ...words(p.product_type), ...(e.kw ? words(e.kw) : []), ...(p.tags || []).slice(0, 6).flatMap(words)] }; });
+}
 async function fromOg(e) {
   const r = await get(e.url); if (!r.ok) throw new Error(`HTTP ${r.status}`);
   const t = (await r.text()).slice(0, 600000);
@@ -152,11 +183,13 @@ async function fromOg(e) {
 }
 
 // ---------- Main ----------
-const byCat = {};
+const byCat = {}, seen = new Set();
 for (const e of SPEC) {
   let items = [];
-  try { items = e.kind === 'shopify' ? await fromShopify(e) : await fromOg(e); } catch (err) { console.warn(`  FAIL ${e.kind} ${e.host || e.url}: ${err.message}`); continue; }
+  try { items = e.kind === 'shopify' ? await fromShopify(e) : e.kind === 'shopify-top' ? await fromShopifyTop(e) : await fromOg(e); } catch (err) { console.warn(`  FAIL ${e.kind} ${e.host || e.url}: ${err.message}`); continue; }
   for (const p of items) {
+    const key = (p.category + '|' + p.brand + '|' + p.title).toLowerCase();   // colour/size variants share a title → keep the first
+    if (seen.has(key)) continue; seen.add(key);
     if (!(await isImage(p.image))) { console.warn(`  FAIL image failed: ${p.brand} ${p.title} ${p.image.slice(0, 80)}`); continue; }
     (byCat[p.category] ||= []).push(p);
     console.log(`  OK   ${p.category.padEnd(11)} ${p.brand} · ${p.title.slice(0, 48)} · $${p.price}`);
@@ -165,8 +198,10 @@ for (const e of SPEC) {
 let total = 0;
 mkdirSync(join(ROOT, 'data'), { recursive: true });
 for (const [cat, list] of Object.entries(byCat)) {
-  const v = validateProducts(list, cat);
-  if (!v.ok) { console.error(`FAIL ${cat}: ${v.errors.length} validation errors`, v.errors.slice(0, 3)); continue; }
+  let v = validateProducts(list, cat);
+  if (!v.ok && v.products.length) v = validateProducts(v.products, cat);   // drop the odd bad row, keep the rest
+  const prevFile = join(ROOT, 'data', `${cat}.json`), prev = existsSync(prevFile) ? JSON.parse(readFileSync(prevFile, 'utf8')) : [];
+  if (!v.ok || v.products.length < Math.max(5, Math.floor(prev.length * 0.6))) { console.error(`KEEP ${cat}: run returned ${v.products.length} valid products (previous ${prev.length}) — keeping previous file`); total += prev.length; continue; }
   if (!DRY) writeFileSync(join(ROOT, 'data', `${cat}.json`), JSON.stringify(v.products, null, 1) + '\n');
   total += v.products.length;
   console.log(`${cat}: ${v.products.length} products, ${v.stats.merchants} merchants${DRY ? ' (dry)' : ''}`);

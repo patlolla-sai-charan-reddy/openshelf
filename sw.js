@@ -5,7 +5,7 @@ self.addEventListener('install', e => e.waitUntil(caches.open(CACHE).then(c => c
 self.addEventListener('activate', e => e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())));
 self.addEventListener('fetch', e => {
   const u = new URL(e.request.url);
-  if (e.request.method !== 'GET' || u.origin !== location.origin || /admin/.test(u.pathname)) return;   // images, analytics, admin → network
+  if (e.request.method !== 'GET' || u.origin !== location.origin) return;   // images, analytics → network
   e.respondWith(caches.open(CACHE).then(async c => {
     const key = u.origin + u.pathname;   // one cache entry per file (search.html?q=… collapses to search.html)
     const hit = await c.match(key);

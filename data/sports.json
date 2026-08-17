@@ -333,5 +333,216 @@
    "gender",
    "hue"
   ]
+ },
+ {
+  "brand": "Manduka",
+  "title": "CLOUD Pilates Mat 12mm",
+  "price": 124,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0132/3529/0170/files/1H1013010-CLOUD-PILATES-12MM-68-BLACK-PLUM_06.jpg?v=1785809815&width=352&height=352&crop=center",
+  "url": "https://manduka.com/products/cloud-pilates-mat-12mm",
+  "merchant": "Manduka",
+  "category": "sports",
+  "keywords": [
+   "cloud",
+   "pilates",
+   "mat",
+   "12mm",
+   "mats"
+  ]
+ },
+ {
+  "brand": "Manduka",
+  "title": "Lean Recycled Foam Yoga Block",
+  "price": 22,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0132/3529/0170/files/451011684-LEAN-R-FOAM-BLOCK-LINEN_02.jpg?v=1781574603&width=352&height=352&crop=center",
+  "url": "https://manduka.com/products/lean-recycled-foam-yoga-block",
+  "merchant": "Manduka",
+  "category": "sports",
+  "keywords": [
+   "lean",
+   "recycled",
+   "foam",
+   "yoga",
+   "block",
+   "props",
+   "rebuy",
+   "blocks"
+  ]
+ },
+ {
+  "brand": "Manduka",
+  "title": "Almost Perfect GRP Adapt Lite 2.0 Yoga Mat 4mm",
+  "price": 62,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0132/3529/0170/files/GRP-ADAPT-LITE-2-CARBON-BLACK_01.jpg?v=1764829310&width=352&height=352&crop=center",
+  "url": "https://manduka.com/products/almost-perfect-grp-adapt-lite-2-0-yoga-mat-4mm",
+  "merchant": "Manduka",
+  "category": "sports",
+  "keywords": [
+   "almost",
+   "perfect",
+   "grp",
+   "adapt",
+   "lite",
+   "yoga",
+   "mat",
+   "4mm",
+   "mats",
+   "rebuy",
+   "series",
+   "studio"
+  ]
+ },
+ {
+  "brand": "Manduka",
+  "title": "GRP Adapt Lite 2.1 Yoga Mat 4mm",
+  "price": 108,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0132/3529/0170/files/GRP-ADAPT-LITE-2-CARBON-BLACK_01.jpg?v=1764829310&width=352&height=352&crop=center",
+  "url": "https://manduka.com/products/grp-adapt-lite-2-1-yoga-mat-4mm",
+  "merchant": "Manduka",
+  "category": "sports",
+  "keywords": [
+   "grp",
+   "adapt",
+   "lite",
+   "yoga",
+   "mat",
+   "4mm",
+   "mats",
+   "rebuy",
+   "series",
+   "studio"
+  ]
+ },
+ {
+  "brand": "Therabody",
+  "title": "Theragun Prime Charging Stand",
+  "price": 99.99,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0671/4097/6867/files/Prime-G6-Charging-Stand-PLP-Thumbnail-1.webp?v=1782487250&width=352&height=352&crop=center",
+  "url": "https://therabody.com/products/theragun-prime-charging-stand",
+  "merchant": "Therabody",
+  "category": "sports",
+  "keywords": [
+   "theragun",
+   "prime",
+   "charging",
+   "stand",
+   "online",
+   "store"
+  ]
+ },
+ {
+  "brand": "Therabody",
+  "title": "Theragun Mini Plus",
+  "price": 279.99,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0671/4097/6867/files/Theragun-Mini-Plus-PLP-Thumbnail-1.webp?v=1759992126&width=352&height=352&crop=center",
+  "url": "https://therabody.com/products/theragun-mini-plus-massage-gun",
+  "merchant": "Therabody",
+  "category": "sports",
+  "keywords": [
+   "theragun",
+   "mini",
+   "plus",
+   "online",
+   "store"
+  ]
+ },
+ {
+  "brand": "Therabody",
+  "title": "Theragun Sense",
+  "price": 299.99,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0671/4097/6867/files/Sense-Gen-2-PLP-Thumbnail-1.webp?v=1760136901&width=352&height=352&crop=center",
+  "url": "https://therabody.com/products/theragun-sense-gen-2-massage-gun",
+  "merchant": "Therabody",
+  "category": "sports",
+  "keywords": [
+   "theragun",
+   "sense",
+   "online",
+   "store"
+  ]
+ },
+ {
+  "brand": "Stanley",
+  "title": "The Flowstate Spring Bottle | 20 OZ",
+  "price": 30,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0375/3269/6635/files/Web_PNG_Square-TheFlowstateSpringBottle20oz-Black2.0-Front.png?v=1775572782&width=352&height=352&crop=center",
+  "url": "https://stanley1913.com/products/the-flowstate™-spring-bottle-20-oz-stanley-create",
+  "merchant": "Stanley",
+  "category": "sports",
+  "keywords": [
+   "the",
+   "flowstate",
+   "spring",
+   "bottle",
+   "stanley",
+   "create",
+   "water",
+   "bottles",
+   "non",
+   "returnable"
+  ]
+ },
+ {
+  "brand": "Stanley",
+  "title": "The Quencher H2.0 Flowstate Tumbler | 30 OZ",
+  "price": 50,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0375/3269/6635/files/Web_PNG_Square-The_Quencher_H2.0_Flowstate_Tumbler_30OZ_-_Blue_Dream_Wildflower_-_Front.png?v=1782915017&width=352&height=352&crop=center",
+  "url": "https://stanley1913.com/products/quencher-h2-0-flowstate-tumbler-30-oz-0-88-l-bts",
+  "merchant": "Stanley",
+  "category": "sports",
+  "keywords": [
+   "the",
+   "quencher",
+   "flowstate",
+   "tumbler",
+   "tumblers",
+   "label",
+   "customize",
+   "alwayson",
+   "back",
+   "school",
+   "cold",
+   "drinks",
+   "drinkware",
+   "hydration"
+  ]
+ },
+ {
+  "brand": "Stanley",
+  "title": "The Fútbol Artist Collection Everyday Tumbler | 16 OZ",
+  "price": 33.75,
+  "currency": "USD",
+  "image": "https://cdn.shopify.com/s/files/1/0375/3269/6635/files/Web_PNG_Square-2026-02-26__The_Everyday_Tumbler_16OZ_-_USA_FC_-_Front.png?v=1777648893&width=352&height=352&crop=center",
+  "url": "https://stanley1913.com/products/futbol-artist-collection-everyday-tumbler-16-oz",
+  "merchant": "Stanley",
+  "category": "sports",
+  "keywords": [
+   "the",
+   "tbol",
+   "artist",
+   "collection",
+   "everyday",
+   "tumbler",
+   "tumblers",
+   "home",
+   "brew",
+   "backyard",
+   "camping",
+   "barware",
+   "beer",
+   "spirits",
+   "beers",
+   "and",
+   "bites"
+  ]
  }
 ]
