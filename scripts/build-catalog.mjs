@@ -189,13 +189,14 @@ for (const e of SPEC) {
   let items = [];
   try { items = e.kind === 'shopify' ? await fromShopify(e) : e.kind === 'shopify-top' ? await fromShopifyTop(e) : await fromOg(e); }
   catch (err) {   // retailer blocked this runner (403) / down → reuse the record collected on a previous run, if any
-    const kept = previous.find(p => p.url === e.url); if (kept) { console.warn(`  KEEP ${e.host || e.url}: ${err.message} — reusing previous record`); items = [kept]; }
+    const kept = previous.find(p => p.url === e.url); if (kept) { console.warn(`  KEEP ${e.host || e.url}: ${err.message} — reusing previous record`); items = [{ ...kept, _kept: true }]; }
     else { console.warn(`  FAIL ${e.kind} ${e.host || e.url}: ${err.message}`); continue; }
   }
   for (const p of items) {
     const key = (p.category + '|' + p.brand + '|' + p.title).toLowerCase();   // colour/size variants share a title → keep the first
     if (seen.has(key)) continue; seen.add(key);
-    if (!(await isImage(p.image))) { console.warn(`  FAIL image failed: ${p.brand} ${p.title} ${p.image.slice(0, 80)}`); continue; }
+    if (p._kept) delete p._kept;   // image was verified when it was originally collected; its CDN may block this runner
+    else if (!(await isImage(p.image))) { console.warn(`  FAIL image failed: ${p.brand} ${p.title} ${p.image.slice(0, 80)}`); continue; }
     (byCat[p.category] ||= []).push(p);
     console.log(`  OK   ${p.category.padEnd(11)} ${p.brand} · ${p.title.slice(0, 48)} · $${p.price}`);
   }
