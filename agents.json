@@ -5,8 +5,8 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 21,
-   "stores": 6,
+   "products": 20,
+   "stores": 5,
    "keywords": [
     "shoe",
     "sneaker",
@@ -26,8 +26,8 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 14,
-   "stores": 5,
+   "products": 13,
+   "stores": 4,
    "keywords": [
     "clothing",
     "clothe",
@@ -81,8 +81,8 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 20,
-   "stores": 9,
+   "products": 18,
+   "stores": 7,
    "keywords": [
     "home",
     "kitchen",
