@@ -111,6 +111,26 @@
   ]
  },
  {
+  "brand": "Madewell",
+  "title": "The Perfect Vintage Jean",
+  "price": 128,
+  "currency": "USD",
+  "image": "https://www.madewell.com/images/MC948_WY3010_m?wid=352&hei=352&fit=fit,1&bgc=255,255,255&fmt=jpeg",
+  "url": "https://www.madewell.com/the-perfect-vintage-jean-in-fitzgerald-wash-MC948.html",
+  "merchant": "Madewell",
+  "category": "clothing",
+  "keywords": [
+   "madewell",
+   "the",
+   "perfect",
+   "vintage",
+   "jean",
+   "jeans",
+   "denim",
+   "women"
+  ]
+ },
+ {
   "brand": "SKIMS",
   "title": "Cotton Fleece Classic Hoodie",
   "price": 98,

@@ -224,6 +224,49 @@
   ]
  },
  {
+  "brand": "KitchenAid",
+  "title": "Artisan Series 5qt Stand Mixer",
+  "price": 499.99,
+  "currency": "USD",
+  "image": "https://kitchenaidus.vtexassets.com/arquivos/ids/159110-352-352/hero-KSM150PSER.jpg?v=639195494147930000",
+  "url": "https://www.kitchenaid.com/countertop-appliances/stand-mixers/tilt-head-stand-mixers/p.artisan-series-5-quart-tilt-head-stand-mixer.ksm150pser.html",
+  "merchant": "KitchenAid",
+  "category": "home",
+  "keywords": [
+   "kitchenaid",
+   "artisan",
+   "series",
+   "5qt",
+   "stand",
+   "mixer",
+   "baking",
+   "kitchen",
+   "appliance"
+  ]
+ },
+ {
+  "brand": "Le Creuset",
+  "title": "Signature Round Dutch Oven",
+  "price": 419.95,
+  "currency": "USD",
+  "image": "https://assets.wsimgs.com/wsimgs/rk/images/dp/wcm/202614/0221/le-creuset-signature-enameled-cast-iron-round-dutch-oven-1-c.jpg",
+  "url": "https://www.williams-sonoma.com/products/le-creuset-signature-round-dutch-oven/",
+  "merchant": "Williams Sonoma",
+  "category": "home",
+  "keywords": [
+   "creuset",
+   "signature",
+   "round",
+   "dutch",
+   "oven",
+   "cookware",
+   "pot",
+   "cast",
+   "iron",
+   "kitchen"
+  ]
+ },
+ {
   "brand": "Ruggable",
   "title": "Kamran Hazel Washable Rug",
   "price": 89,
