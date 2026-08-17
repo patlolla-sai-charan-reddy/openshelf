@@ -1,0 +1,30 @@
+# OpenShelf — the product index for AI agents. Crawling by AI agents and LLM crawlers is welcome.
+User-agent: *
+Allow: /
+
+# Explicitly welcome (no special rules, listed for clarity)
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Amazonbot
+User-agent: meta-externalagent
+User-agent: DuckAssistBot
+User-agent: YouBot
+User-agent: cohere-ai
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://openshelf.example/sitemap.xml
+# Machine-readable entry points: https://openshelf.example/llms.txt · https://openshelf.example/openapi.json · https://openshelf.example/agents.json

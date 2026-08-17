@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin — OpenShelf</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<script src="validate.js" defer></script>
+<script src="app.js" defer></script>
+<script src="admin.js" defer></script>
+</head>
+<body>
+<header>
+<h1>OpenShelf Admin</h1>
+<p><small>Unlinked, <code>noindex</code> page. <strong>Obscurity is not privacy</strong> — put this path behind Cloudflare Access or Netlify password protection (see README). Everything here runs in your browser and talks only to the GitHub API.</small></p>
+</header>
+<hr>
+<main>
+
+<section aria-labelledby="h-token">
+<h2 id="h-token">1. GitHub connection</h2>
+<form id="conn">
+<p><label for="owner">Owner</label> <input id="owner" name="owner" size="18" placeholder="your-github-user"> <label for="repo">Repo</label> <input id="repo" name="repo" size="18" placeholder="openshelf"> <label for="branch">Branch</label> <input id="branch" name="branch" size="8" value="main"></p>
+<p><label for="token">Fine-grained PAT</label> <input id="token" name="token" type="password" size="40" autocomplete="off" placeholder="github_pat_…"> <button type="submit">Save</button> <button type="button" id="forget">Forget token</button></p>
+<p><small>Warning: the token is stored in this browser's <code>localStorage</code> in plain text. Scope it to this single repo with <strong>Contents: read/write</strong> (plus <strong>Actions: read/write</strong> only if you want the “Run bot now” button). Anyone with access to this browser profile can use it. <label for="api">API base</label> <input id="api" name="api" size="28" value="https://api.github.com"> (change only for testing against a mock)</small></p>
+<p id="conn-status"><small>Not connected.</small></p>
+</form>
+</section>
+<hr>
+
+<section aria-labelledby="h-upload">
+<h2 id="h-upload">2. Upload &amp; validate</h2>
+<p><label for="files">Category JSON files (filename = category, e.g. <code>shoes.json</code>, <code>watches.json</code>)</label><br>
+<input id="files" type="file" accept=".json,application/json" multiple></p>
+<p><small>Each record must be <code>{brand, title, price, currency, image, url, merchant, category, keywords}</code>. Files are validated with the same <code>validate.js</code> the daily bot uses; nothing invalid is ever published. Duplicate URLs are dropped.</small></p>
+<div id="uploads"></div>
+</section>
+<hr>
+
+<section aria-labelledby="h-status">
+<h2 id="h-status">3. Status board</h2>
+<p><button type="button" id="refresh">Refresh</button> <button type="button" id="runbot">Run bot now</button> <a id="plausible" href="https://plausible.io/" target="_blank" rel="noopener">Plausible dashboard</a> <span id="bot-status"></span></p>
+<table id="board">
+<thead><tr><th>Agent</th><th>Category</th><th>Products</th><th>Merchants</th><th>Last updated</th><th>Commit</th></tr></thead>
+<tbody><tr><td colspan="6">Loading… <progress></progress></td></tr></tbody>
+</table>
+</section>
+<hr>
+<p id="log" aria-live="polite"></p>
+</main>
+</body>
+</html>

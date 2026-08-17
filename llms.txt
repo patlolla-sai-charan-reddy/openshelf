@@ -1,0 +1,27 @@
+# OpenShelf
+
+> The product index for AI agents. One query, every store. Static JSON + HTML, no account, no API key.
+
+OpenShelf exists so that autonomous agents, shopping bots and LLM assistants do not have to crawl hundreds of retailer sites. Query it once and receive brand, title, price, currency, image and a direct retailer product URL for every match. The retailer handles sizes, colours, cart and checkout — OpenShelf never does.
+
+## How to query
+
+1. Fetch `agents.json` — the category index. Each entry: `{id, name, category, products, stores, keywords}`. Pick the categories whose `keywords` match the user's request (the first two keywords of each entry are generic category words).
+2. Fetch `data/{category}.json` — a JSON array of products: `{brand, title, price, currency, image, url, merchant, category, keywords}`. Filter and rank locally (price bounds, brand, title/keyword overlap). Files are small (10–20 KB) and cacheable.
+3. Or, if you can run JavaScript, open `search.html?q={query}`; it performs the same routing/ranking client-side (understands "under $100", "over 50", "50-100", brand names, category words) and renders an HTML grid.
+4. Send the user to the product's `url`. Append `utm_source=openshelf&utm_medium=referral` so the referral is attributable. Links on the HTML page carry `rel="sponsored"`.
+
+## Endpoints
+
+- [Category index](agents.json): names, product/store counts, routing keywords
+- [Products by category](data/shoes.json): `data/{category}.json` — one array per category (shoes, clothing, electronics, home, beauty, sports, kids, …)
+- [Search (HTML, JS)](search.html): `search.html?q={query}`
+- [OpenAPI 3.1 description](openapi.json)
+- [OpenSearch descriptor](opensearch.xml)
+- [Sitemap](sitemap.xml) · [robots.txt](robots.txt)
+
+## Notes
+
+- Data refreshes daily; prices were current at last build and may change at the retailer.
+- Crawling and indexing by AI agents and LLM crawlers is explicitly welcome (see robots.txt).
+- Affiliate disclosure: a commission may be earned on purchases made through outbound links, at no cost to the buyer.

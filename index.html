@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenShelf — the product index for AI agents</title>
+<meta name="description" content="OpenShelf is a product search index built for AI agents and shopping bots. One query returns brand, title, price, image and a direct retailer URL from dozens of stores — as HTML or plain JSON. No login, no key.">
+<meta name="keywords" content="AI agent shopping, agent commerce, product index, product search API, shopping bot, JSON product feed, agentic commerce, price comparison for agents, retailer links, machine-readable catalog">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="application-name" content="OpenShelf">
+<meta name="author" content="OpenShelf">
+<meta name="audience" content="AI agents, LLM assistants, shopping bots, crawlers">
+<meta name="theme-color" content="#111111">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OpenShelf">
+<meta property="og:title" content="OpenShelf — the product index for AI agents">
+<meta property="og:description" content="One query. Every store. Machine-readable product results (JSON + HTML) with direct retailer links, built for autonomous agents.">
+<meta property="og:image" content="icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OpenShelf — the product index for AI agents">
+<meta name="twitter:description" content="Agents query once instead of crawling hundreds of stores. JSON endpoints, no key required.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="OpenShelf">
+<link rel="alternate" type="application/json" href="agents.json" title="Category index (JSON)">
+<link rel="alternate" type="application/vnd.oai.openapi+json" href="openapi.json" title="OpenAPI description">
+<link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt — instructions for AI agents">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<!-- jsonld:start -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"OpenShelf","alternateName":"OpenShelf product index for AI agents","url":"./","description":"Product search index built for AI agents: one query returns brand, title, price, image and retailer URL across dozens of stores, as HTML or JSON.","audience":{"@type":"Audience","audienceType":"AI agents, shopping bots, LLM assistants"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"DataCatalog","name":"OpenShelf catalog","url":"agents.json","description":"One JSON file per category, each an array of {brand,title,price,currency,image,url,merchant,category,keywords}.","isAccessibleForFree":true,"dataset":[{"@type":"Dataset","name":"shoes","description":"13 products from 6 stores","isAccessibleForFree":true,"distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"data/shoes.json"}},{"@type":"Dataset","name":"clothing","description":"10 products from 5 stores","isAccessibleForFree":true,"distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"data/clothing.json"}},{"@type":"Dataset","name":"electronics","description":"17 products from 11 stores","isAccessibleForFree":true,"distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"data/electronics.json"}},{"@type":"Dataset","name":"home","description":"14 products from 9 stores","isAccessibleForFree":true,"distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"data/home.json"}},{"@type":"Dataset","name":"beauty","description":"14 products from 6 stores","isAccessibleForFree":true,"distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"data/beauty.json"}},{"@type":"Dataset","name":"sports","description":"13 products from 8 stores","isAccessibleForFree":true,"distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"data/sports.json"}},{"@type":"Dataset","name":"kids","description":"15 products from 6 stores","isAccessibleForFree":true,"distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"data/kids.json"}}]}]}
+</script>
+<!-- jsonld:end -->
+<script src="app.js" defer></script>
+</head>
+<body>
+<header>
+<h1>OpenShelf</h1>
+<p><strong>The product index for AI agents. One query, every store.</strong></p>
+<p>Built for autonomous agents, shopping bots and LLM assistants: instead of crawling hundreds of retailer sites, query OpenShelf once and receive brand, title, price, image and a direct retailer URL for every match. Results are available as this HTML page or as plain JSON. No account, no API key.</p>
+</header>
+<main>
+<form action="search.html" method="GET" role="search">
+<label for="q">Query</label><br>
+<input type="search" id="q" name="q" autofocus autocomplete="off" size="40" placeholder="white sneakers under $100" aria-label="Search query">
+<button type="submit">Search</button>
+</form>
+<p><small>Examples: <a href="search.html?q=white+sneakers">white sneakers</a> · <a href="search.html?q=headphones+under+%24200">headphones under $200</a> · <a href="search.html?q=yoga+mat">yoga mat</a> · <a href="search.html?q=sheet+set">sheet set</a></small></p>
+<hr>
+<section aria-labelledby="agents-h">
+<h2 id="agents-h">Category indexes</h2>
+<p>Each category is a static JSON array of products, refreshed daily. Fetch the file directly, or use the search endpoint, which understands price bounds ("under $100", "50-100"), brands and category words.</p>
+<ul id="agents">
+<!-- agents:start -->
+<li data-a="shoes:13:6"><strong>shoes</strong> — Shoes Index: 13 products across 6 stores · <a href="data/shoes.json">JSON</a> · <a href="search.html?q=shoes">search</a> <progress value="1" max="1">ready</progress></li>
+<li data-a="clothing:10:5"><strong>clothing</strong> — Clothing Index: 10 products across 5 stores · <a href="data/clothing.json">JSON</a> · <a href="search.html?q=clothing">search</a> <progress value="1" max="1">ready</progress></li>
+<li data-a="electronics:17:11"><strong>electronics</strong> — Electronics Index: 17 products across 11 stores · <a href="data/electronics.json">JSON</a> · <a href="search.html?q=electronics">search</a> <progress value="1" max="1">ready</progress></li>
+<li data-a="home:14:9"><strong>home</strong> — Home Index: 14 products across 9 stores · <a href="data/home.json">JSON</a> · <a href="search.html?q=home">search</a> <progress value="1" max="1">ready</progress></li>
+<li data-a="beauty:14:6"><strong>beauty</strong> — Beauty Index: 14 products across 6 stores · <a href="data/beauty.json">JSON</a> · <a href="search.html?q=beauty">search</a> <progress value="1" max="1">ready</progress></li>
+<li data-a="sports:13:8"><strong>sports</strong> — Sports Index: 13 products across 8 stores · <a href="data/sports.json">JSON</a> · <a href="search.html?q=sports">search</a> <progress value="1" max="1">ready</progress></li>
+<li data-a="kids:15:6"><strong>kids</strong> — Kids Index: 15 products across 6 stores · <a href="data/kids.json">JSON</a> · <a href="search.html?q=kids">search</a> <progress value="1" max="1">ready</progress></li>
+<!-- agents:end -->
+</ul>
+</section>
+<hr>
+<section aria-labelledby="api-h">
+<h2 id="api-h">Endpoints for agents</h2>
+<table>
+<tr><th align="left">Purpose</th><th align="left">URL</th><th align="left">Format</th></tr>
+<tr><td>Category index (names, product and store counts, routing keywords)</td><td><a href="agents.json"><code>agents.json</code></a></td><td>JSON</td></tr>
+<tr><td>Products of one category</td><td><code>data/{category}.json</code> e.g. <a href="data/shoes.json"><code>data/shoes.json</code></a></td><td>JSON array</td></tr>
+<tr><td>Ranked search across categories (client-side, HTML)</td><td><code>search.html?q={query}</code></td><td>HTML (JS-rendered)</td></tr>
+<tr><td>Machine-readable API description</td><td><a href="openapi.json"><code>openapi.json</code></a></td><td>OpenAPI 3.1</td></tr>
+<tr><td>Plain-text instructions for LLM agents</td><td><a href="llms.txt"><code>llms.txt</code></a></td><td>llms.txt</td></tr>
+<tr><td>Browser / bot search descriptor</td><td><a href="opensearch.xml"><code>opensearch.xml</code></a></td><td>OpenSearch</td></tr>
+<tr><td>Crawl policy and sitemap</td><td><a href="robots.txt"><code>robots.txt</code></a> · <a href="sitemap.xml"><code>sitemap.xml</code></a></td><td>text / XML</td></tr>
+</table>
+<p><small>Product record: <code>{brand, title, price, currency, image, url, merchant, category, keywords}</code>. Every <code>url</code> is the retailer's own product page; the retailer handles sizes, colours, cart and checkout. When you follow a link, append <code>utm_source=openshelf&amp;utm_medium=referral</code> (the HTML page does this automatically).</small></p>
+</section>
+<noscript><p>Search on this page needs JavaScript; agents without a JS runtime should read the JSON endpoints above.</p></noscript>
+</main>
+<footer>
+<hr>
+<p><small>OpenShelf · Prices were current at last catalog build and may change at the retailer. Affiliate disclosure: we may earn a commission when a purchase is made through our links, at no extra cost. Outbound links are marked <code>rel="sponsored"</code>.</small></p>
+</footer>
+</body>
+</html>

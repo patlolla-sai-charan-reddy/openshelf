@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search — OpenShelf</title>
+<meta name="description" content="OpenShelf search results for AI agents: ranked products with brand, title, price, image and direct retailer URL. Raw JSON available per category.">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<meta name="application-name" content="OpenShelf">
+<meta name="audience" content="AI agents, LLM assistants, shopping bots, crawlers">
+<meta name="theme-color" content="#111111">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OpenShelf">
+<meta property="og:title" content="OpenShelf search — products for AI agents">
+<meta property="og:description" content="One query, every store. Machine-readable results with direct retailer links.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="OpenShelf">
+<link rel="alternate" type="application/json" href="agents.json" title="Category index (JSON)">
+<link rel="alternate" type="application/vnd.oai.openapi+json" href="openapi.json" title="OpenAPI description">
+<link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt — instructions for AI agents">
+<script src="app.js" defer></script>
+</head>
+<body>
+<header>
+<h1><a href="index.html">OpenShelf</a></h1>
+<form action="search.html" method="GET" role="search">
+<input type="search" id="q" name="q" autocomplete="off" size="40" placeholder="Query" aria-label="Search query">
+<button type="submit">Search</button>
+</form>
+<p><small>Affiliate disclosure: we may earn a commission when a purchase is made through our links · prices were current at last catalog build · <a href="index.html">all indexes and JSON endpoints</a></small></p>
+</header>
+<hr>
+<main>
+<section id="status" aria-live="polite"><p>Loading indexes… <progress></progress></p></section>
+<section id="results" aria-label="Products"></section>
+<noscript><p>This ranked view needs JavaScript. Agents without a JS runtime: read <a href="agents.json">agents.json</a> for the category list, then fetch <code>data/{category}.json</code> and filter locally. See <a href="llms.txt">llms.txt</a>.</p></noscript>
+</main>
+</body>
+</html>

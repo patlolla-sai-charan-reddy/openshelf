@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>OpenShelf</ShortName>
+  <LongName>OpenShelf — the product index for AI agents</LongName>
+  <Description>One query, every store: products with brand, title, price, image and direct retailer URL.</Description>
+  <Tags>shopping products agents AI JSON</Tags>
+  <Url type="text/html" method="get" template="https://openshelf.example/search.html?q={searchTerms}"/>
+  <Url type="application/json" rel="collection" template="https://openshelf.example/agents.json"/>
+  <Image height="64" width="64" type="image/svg+xml">https://openshelf.example/icon.svg</Image>
+  <InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>

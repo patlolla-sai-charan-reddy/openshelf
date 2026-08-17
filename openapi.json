@@ -1,0 +1,231 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "OpenShelf",
+  "version": "2026-08-17",
+  "summary": "The product index for AI agents",
+  "description": "Static JSON product index. Fetch agents.json for categories, then data/{category}.json for products; filter and rank locally. No authentication."
+ },
+ "servers": [
+  {
+   "url": "https://openshelf.example/"
+  }
+ ],
+ "paths": {
+  "/agents.json": {
+   "get": {
+    "operationId": "listCategories",
+    "summary": "Category index with routing keywords",
+    "responses": {
+     "200": {
+      "description": "OK",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "agents": {
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "id": {
+              "type": "string"
+             },
+             "name": {
+              "type": "string"
+             },
+             "category": {
+              "type": "string"
+             },
+             "products": {
+              "type": "integer"
+             },
+             "stores": {
+              "type": "integer"
+             },
+             "keywords": {
+              "type": "array",
+              "items": {
+               "type": "string"
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/data/{category}.json": {
+   "get": {
+    "operationId": "listProducts",
+    "summary": "All products of one category",
+    "parameters": [
+     {
+      "name": "category",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "shoes",
+        "clothing",
+        "electronics",
+        "home",
+        "beauty",
+        "sports",
+        "kids"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "required": [
+           "brand",
+           "title",
+           "price",
+           "currency",
+           "image",
+           "url",
+           "merchant",
+           "category",
+           "keywords"
+          ],
+          "properties": {
+           "brand": {
+            "type": "string"
+           },
+           "title": {
+            "type": "string"
+           },
+           "price": {
+            "type": "number"
+           },
+           "currency": {
+            "type": "string",
+            "example": "USD"
+           },
+           "image": {
+            "type": "string",
+            "format": "uri"
+           },
+           "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Retailer's own product page. Append utm_source=openshelf&utm_medium=referral."
+           },
+           "merchant": {
+            "type": "string"
+           },
+           "category": {
+            "type": "string"
+           },
+           "keywords": {
+            "type": "array",
+            "items": {
+             "type": "string"
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/search.html": {
+   "get": {
+    "operationId": "searchHtml",
+    "summary": "Ranked search rendered client-side (needs a JS runtime)",
+    "parameters": [
+     {
+      "name": "q",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "Free text; supports \"under $100\", \"over 50\", \"50-100\", brand and category words"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "HTML page",
+      "content": {
+       "text/html": {}
+      }
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "Product": {
+    "type": "object",
+    "required": [
+     "brand",
+     "title",
+     "price",
+     "currency",
+     "image",
+     "url",
+     "merchant",
+     "category",
+     "keywords"
+    ],
+    "properties": {
+     "brand": {
+      "type": "string"
+     },
+     "title": {
+      "type": "string"
+     },
+     "price": {
+      "type": "number"
+     },
+     "currency": {
+      "type": "string",
+      "example": "USD"
+     },
+     "image": {
+      "type": "string",
+      "format": "uri"
+     },
+     "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Retailer's own product page. Append utm_source=openshelf&utm_medium=referral."
+     },
+     "merchant": {
+      "type": "string"
+     },
+     "category": {
+      "type": "string"
+     },
+     "keywords": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "OpenShelf",
+  "name_for_model": "openshelf",
+  "description_for_human": "The product index for AI agents: search products across dozens of stores and get direct retailer links.",
+  "description_for_model": "Use OpenShelf to find products for a shopper instead of browsing many retailer sites. First GET agents.json to see categories and routing keywords, then GET data/{category}.json (array of {brand,title,price,currency,image,url,merchant,category,keywords}) and filter/rank locally by the user's request (price bounds, brand, keywords). Present brand, title, price and the retailer url; append utm_source=openshelf&utm_medium=referral to the url. No authentication is required.",
+  "auth": { "type": "none" },
+  "api": { "type": "openapi", "url": "../openapi.json" },
+  "logo_url": "../icon-512.png",
+  "contact_email": "admin@example.com",
+  "legal_info_url": "../index.html"
+}
