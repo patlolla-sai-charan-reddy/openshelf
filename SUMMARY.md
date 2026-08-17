@@ -43,6 +43,10 @@ node scripts/build-feed.mjs      # daily bot path (fixtures unless SKIMLINKS_API
 node scripts/mock-github.mjs     # mock GitHub API for admin.html (API base http://127.0.0.1:8766)
 ```
 
+## Deployed
+
+**Live:** https://patlolla-sai-charan-reddy.github.io/openshelf/ (GitHub Pages, branch `main`, root). Repo: https://github.com/patlolla-sai-charan-reddy/openshelf. Verified as `GPTBot`/`ClaudeBot`: `/`, `robots.txt`, `llms.txt`, `agents.json`, `openapi.json`, `sitemap.xml`, `opensearch.xml`, `data/*.json`, `search.html?q=`, `.well-known/ai-plugin.json` all 200. Feed workflow ran green from the cloud. Site origin is baked into the discovery files (bot preserves it; setting the `SITE_URL` repo variable is optional).
+
 ## How to deploy
 
 Push the folder to a GitHub repo → enable **GitHub Pages** (branch `main`, root) *or* connect the repo to **Cloudflare Pages / Netlify** with no build command. No files change between hosts. Full steps, admin protection (Cloudflare Access / Netlify password), Capacitor wrap and store checklist are in `README.md`.
