@@ -45,7 +45,9 @@ async function fetchSkimlinks(agent) {
 }
 
 // ---- Agent-discovery files that need absolute URLs (set repo variable SITE_URL, e.g. https://openshelf.example) ----
-const SITE = (env.SITE_URL || 'https://openshelf.example').replace(/\/$/, '') + '/';
+// SITE_URL env → else the origin already baked into sitemap.xml (so a bot run without the variable never regresses to the placeholder).
+const prevSite = existsSync(join(ROOT, 'sitemap.xml')) ? (readFileSync(join(ROOT, 'sitemap.xml'), 'utf8').match(/<loc>(https?:\/\/[^<]*?)(?:index\.html)?<\/loc>/) || [])[1] : '';
+const SITE = (env.SITE_URL || prevSite || 'https://openshelf.example').replace(/\/$/, '') + '/';
 const today = new Date().toISOString().slice(0, 10);
 function writeDiscovery(agents) {
   const urls = ['', 'index.html', 'search.html', 'agents.json', 'llms.txt', 'openapi.json', ...agents.map(a => `data/${a.category}.json`)];

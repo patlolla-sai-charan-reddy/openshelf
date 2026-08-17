@@ -26,5 +26,5 @@ User-agent: cohere-ai
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://openshelf.example/sitemap.xml
-# Machine-readable entry points: https://openshelf.example/llms.txt · https://openshelf.example/openapi.json · https://openshelf.example/agents.json
+Sitemap: https://patlolla-sai-charan-reddy.github.io/openshelf/sitemap.xml
+# Machine-readable entry points: https://patlolla-sai-charan-reddy.github.io/openshelf/llms.txt · https://patlolla-sai-charan-reddy.github.io/openshelf/openapi.json · https://patlolla-sai-charan-reddy.github.io/openshelf/agents.json
