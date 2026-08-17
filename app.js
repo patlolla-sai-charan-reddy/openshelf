@@ -42,7 +42,7 @@ function intent(q, agents) {
   if ((m = s.match(/(over|above|more than|min|at least|>)\s*\$?(\d+(?:\.\d+)?)/))) min = +m[2];
   if ((m = s.match(/\$?(\d+)\s*(?:-|to)\s*\$?(\d+)/))) { min = +m[1]; max = +m[2]; }
   const tokens = [...new Set(s.replace(/\$?\d+(\.\d+)?/g, ' ').split(/[^a-z0-9'&+]+/).filter(t => t && !STOP.has(t)).map(stem))];
-  const hit = agents.filter(a => tokens.some(t => a.keywords.includes(t) || t === a.category || t === a.id));
+  const hit = agents.filter(a => tokens.some(t => a.keywords.includes(t) || t === a.category || t === a.id || (a.brands || []).some(b => b.replace(/[^a-z0-9]/g, '') === t.replace(/[^a-z0-9]/g, ''))));
   const kw = Object.fromEntries(agents.map(a => [a.category, [a.category, a.id, ...a.keywords.slice(0, 2)]]));   // generic words ("shoes", "kids", "skincare") match every product of that agent
   return { q, tokens, min, max, kw, agents: hit.length ? hit : agents, targeted: hit.length > 0 };
 }
@@ -69,6 +69,10 @@ async function search() {
   const q = (new URLSearchParams(location.search).get('q') || '').trim(), status = $('#status'), out = $('#results');
   $('#q').value = q; document.title = (q || 'Search') + ' — OpenShelf';
   const agents = await agentsJSON(), it = intent(q, agents);
+  if (!q) {   // no query → don't fetch every category file; list the indexes instead
+    status.innerHTML = `<p>${agents.reduce((n, a) => n + (a.products || 0), 0)} products in ${agents.length} indexes. Type a query, or open an index:</p>`;
+    out.innerHTML = '<ul>' + agents.map(a => `<li><a href="search.html?q=${a.category}">${a.category}</a> — ${a.products || 0} products, ${a.stores} stores · <a href="data/${a.category}.json">JSON</a></li>`).join('') + '</ul>'; return;
+  }
   const stop = showLoader(status, it.agents, agents.filter(a => !it.agents.includes(a)));   // real work starts…
   const lists = await Promise.all(it.agents.map(a => fetch(`data/${a.category}.json`).then(r => r.json()).catch(() => [])));
   stop();                                                                                    // …and ends here.

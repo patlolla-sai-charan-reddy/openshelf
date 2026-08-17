@@ -127,8 +127,9 @@ for (const agent of manifest.agents) {
     v.errors.slice(0, 5).forEach(e => console.error(`    row ${e.row} ${e.field}: ${e.message}`));
     failures++; report.push({ category: agent.category, source, ok: false, written: false, errors: v.errors.length }); continue;
   }
-  if (!DRY) writeFileSync(file, JSON.stringify(v.products, null, 1) + '\n');
+  if (!DRY) writeFileSync(file, JSON.stringify(v.products) + '\n');
   agent.stores = v.stats.merchants; agent.products = v.products.length;
+  agent.brands = [...new Set(v.products.map(p => p.brand.toLowerCase()))].sort();   // lets the client route brand-only queries to this file
   report.push({ category: agent.category, source, ok: true, written: !DRY, products: v.products.length, merchants: v.stats.merchants, warnings: v.warnings.length });
 }
 // Auto-register agents for data files that have no agent yet (e.g. a new category added to the collector spec).

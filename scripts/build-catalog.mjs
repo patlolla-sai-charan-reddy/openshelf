@@ -54,7 +54,7 @@ const tidyTitle = (t, brand) => {
 const S = (host, merchant, category, picks, o = {}) => ({ kind: 'shopify', host, merchant, category, picks, ...o });
 const O = (url, category, merchant, brand, title, price, kw = '') => ({ kind: 'og', url, category, merchant, brand, title, price, kw });
 // T(store, merchant, category, match, take) → Shopify: collect up to `take` available products whose product_type or title matches (newest first).
-const TOP = +(process.env.COLLECT_TOP || 4);
+const TOP = +(process.env.COLLECT_TOP || 60);   // newest matching products per collector entry
 const T = (host, merchant, category, match, take = TOP, o = {}) => ({ kind: 'shopify-top', host, merchant, category, match, take, ...o });
 const SPEC = [
   // shoes
@@ -108,25 +108,49 @@ const SPEC = [
   S('www.outdoorvoices.com', 'Outdoor Voices', 'sports', ['w-jog-6-short-black', /^Zephyr 3" Short/, /^GridTek Breezy Shortsleeve/], { kw: 'running shorts activewear workout' }),
   S('www.wyze.com', 'Wyze', 'sports', [/^Wyze Scale/], { brand: 'Wyze', kw: 'smart scale fitness weight' }),
   S('www.allbirds.com', 'Allbirds', 'sports', ['womens-tree-dasher-relay'], { kw: 'running shoes trainers' }),
-  // collectors: fresh/new products per store, on top of the curated picks (dedupe by url happens in validate.js)
-  T('kith.com', 'Kith', 'shoes', /Sneakers/, TOP, { exclude: /\b(PS|TD|GS|Infant)\b/ }),
-  T('www.allbirds.com', 'Allbirds', 'shoes', /^Shoes$/),
-  T('www.everlane.com', 'Everlane', 'clothing', /Knit Tops|Denim|Shirting|Outerwear/),
-  T('www.outdoorvoices.com', 'Outdoor Voices', 'clothing', /Dresses|Leggings/),
-  T('www.skullcandy.com', 'Skullcandy', 'electronics', /Headphones|Earbuds/i, TOP, { brand: 'Skullcandy' }),
-  T('www.keychron.com', 'Keychron', 'electronics', /Keyboard/i, TOP, { brand: 'Keychron', match2: /Keyboard/ }),
-  T('www.wyze.com', 'Wyze', 'electronics', /Cam/i, TOP, { brand: 'Wyze' }),
-  T('www.brooklinen.com', 'Brooklinen', 'home', /Sheets|Duvet Covers|Towels/),
-  T('www.parachutehome.com', 'Parachute', 'home', /Sheets|Towels|Bathrobes/, TOP, { brand: 'Parachute' }),
-  T('www.glossier.com', 'Glossier', 'beauty', /Makeup|Skincare|Balms/),
-  T('www.rarebeauty.com', 'Rare Beauty', 'beauty', /Blush|Lip/i),
-  T('www.fentybeauty.com', 'Fenty Beauty', 'beauty', /Lip Gloss|Blushes/),
-  T('www.manduka.com', 'Manduka', 'sports', /Mats|Props/),
-  T('www.therabody.com', 'Therabody', 'sports', /^Theragun$/, TOP, { brand: 'Therabody' }),
-  T('www.stanley1913.com', 'Stanley', 'sports', /Tumblers|Bottles/i, TOP, { brand: 'Stanley' }),
-  T('www.melissaanddoug.com', 'Melissa & Doug', 'kids', /Puzzles|Blocks|Play/),
-  T('www.radioflyer.com', 'Radio Flyer', 'kids', /Ride-On|Wagon|Tricycle/i),
-  T('www.playosmo.com', 'Osmo', 'kids', /./, TOP, { brand: 'Osmo' }),
+  // collectors: whole product lines per store (newest first, up to COLLECT_TOP each), on top of the curated picks
+  T('kith.com', 'Kith', 'shoes', /Sneakers|Boots|Sandals|Loafers/, TOP, { exclude: /\b(PS|TD|GS|Infant|Toddler)\b/ }),
+  T('www.allbirds.com', 'Allbirds', 'shoes', /^Shoes$/, TOP, { exclude: /Smallbirds|Kids/ }),
+  T('www.rothys.com', "Rothy's", 'shoes', /Flat|Point|Loafer|Sneaker|Clog|Mary Jane|Boot/i),
+  T('www.striderite.com', 'Stride Rite', 'kids', /^Shoe$/),
+  T('www.everlane.com', 'Everlane', 'clothing', /Knit Tops|Denim|Shirting|Outerwear|Sweaters|Pants|Dresses|Tees|Bottoms|Skirts/),
+  T('www.outdoorvoices.com', 'Outdoor Voices', 'clothing', /Dresses|Leggings|Longsleeve|Shortsleeve|Skorts|Tanks|Sweatshirts|Pants/),
+  T('www.skims.com', 'SKIMS', 'clothing', /TOPS|DRESSES|BOTTOMS|BRAS|UNDERWEAR|LOUNGE|SLEEP/i, TOP, { brand: 'SKIMS' }),
+  T('kith.com', 'Kith', 'clothing', /Tees|Hoodies|Crewnecks|Pants|Shorts|Jackets|Shirts|Sweaters/, TOP, { vendor: 'Kith', brand: 'Kith' }),
+  T('www.skullcandy.com', 'Skullcandy', 'electronics', /Headphones|Earbuds|Speakers/i, TOP, { brand: 'Skullcandy' }),
+  T('www.jlab.com', 'JLab', 'electronics', /Earbuds|Headphones|Speaker|Microphone|Mouse|Keyboard/i, TOP, { brand: 'JLab' }),
+  T('www.masterdynamic.com', 'Master & Dynamic', 'electronics', /Headphones|Earphones/i, TOP, { brand: 'Master & Dynamic' }),
+  T('www.keychron.com', 'Keychron', 'electronics', /Keyboard|Mouse|Trackball/i, TOP, { brand: 'Keychron' }),
+  T('www.satechi.net', 'Satechi', 'electronics', /Hub|Charger|Mouse|Keyboard|Stand|Adapter|Enclosure|Dock/i, TOP, { brand: 'Satechi' }),
+  T('www.mophie.com', 'mophie', 'electronics', /Powerstation|Charger|Charge Stand|Battery|Snap/i, TOP, { brand: 'mophie' }),
+  T('www.twelvesouth.com', 'Twelve South', 'electronics', /Stand|Charger|AirFly|Hub|Mount|Case/i, TOP, { brand: 'Twelve South' }),
+  T('www.wyze.com', 'Wyze', 'electronics', /Cam|Doorbell|Lock|Bulb|Plug|Scale|Sensor|Vacuum/i, TOP, { brand: 'Wyze', exclude: /Refurbished|Mount|Cable|Adapter|Filter/ }),
+  T('shop.boox.com', 'BOOX', 'electronics', /BOOX (Go|Note|Palma|Tab)/i, TOP, { brand: 'BOOX', exclude: /Case|Cover|Pen|Tips|Protection|Turner/ }),
+  T('shop.8bitdo.com', '8BitDo', 'electronics', /Controller|Keyboard|Arcade|Gamepad/i, TOP, { brand: '8BitDo' }),
+  T('www.hyperx.com', 'HyperX', 'electronics', /Headset|Keyboard|Mouse|Microphone|Mousepad|Controller/i, TOP, { brand: 'HyperX', exclude: /Laptop|Desktop|Monitor|Bundle/ }),
+  T('www.nomadgoods.com', 'Nomad', 'electronics', /Case|Band|Charger|Cable|Wallet|Stand/i, TOP, { brand: 'Nomad' }),
+  T('www.nanoleaf.me', 'Nanoleaf', 'home', /Nanoleaf/, TOP, { brand: 'Nanoleaf', exclude: /Bundle|Saver/ }),
+  T('www.lifx.com', 'LIFX', 'home', /LIFX/, TOP, { brand: 'LIFX', exclude: /Bundle/ }),
+  T('www.brooklinen.com', 'Brooklinen', 'home', /Sheets|Duvet Covers|Towels|Pillows|Comforters|Blankets|Bedding|Robes|Bath/, TOP, { exclude: /Test |Last Call/ }),
+  T('www.parachutehome.com', 'Parachute', 'home', /Sheet|Towel|Bathrobe|Duvet|Quilt|Blanket|Pillow|Rug|Mattress/i, TOP, { brand: 'Parachute' }),
+  T('casper.com', 'Casper', 'home', /Mattress|Pillow|Sheets|Duvet|Protector|Topper|Bed Frame|Blanket/i, TOP, { exclude: /Clearance|Sample/ }),
+  T('www.stanley1913.com', 'Stanley', 'home', /Cookware|Barware|Food|Jug|Cooler|Mug/i, TOP, { brand: 'Stanley' }),
+  T('www.stanley1913.com', 'Stanley', 'sports', /Tumblers|Bottles|Protour|Quencher|IceFlow|Hydration/i, TOP, { brand: 'Stanley' }),
+  T('www.ridgewallet.com', 'Ridge', 'home', /Keycase|Ring|Bag|Backpack|Luggage|Knife|Pen/i, TOP, { brand: 'Ridge', exclude: /Fraternity|Sigma|Kappa|Alpha|Delta|Theta|Phi|Beta|Chi|Omega|Tau|Psi/ }),
+  T('www.glossier.com', 'Glossier', 'beauty', /Makeup|Skincare|Balms|Fragrance|Body|Lip|Eyes|Cheeks|Face/i),
+  T('www.rarebeauty.com', 'Rare Beauty', 'beauty', /Blush|Lip|Brow|Foundation|Concealer|Bronzer|Highlight|Powder|Mascara|Cheek|Setting|Luminizer|Fragrance|Brush/i),
+  T('www.fentybeauty.com', 'Fenty Beauty', 'beauty', /Lip|Blush|Bronzer|Foundation|Concealer|Powder|Highlighter|Skin|Fragrance|Brush|Mascara|Eyeliner|Brow/i, TOP, { exclude: /Sample|Deluxe|Bundle|Set/ }),
+  T('www.colourpop.com', 'ColourPop', 'beauty', /Palette|Lippie|Blush|Bronzer|Highlighter|Liner|Mascara|Shadow|Lip|Gloss|Brush/i, TOP, { exclude: /Empty|Set|Kit|Bundle/ }),
+  T('www.kyliecosmetics.com', 'Kylie Cosmetics', 'beauty', /Lip|Blush|Bronzer|Palette|Gloss|Liner|Skin|Fragrance|Mascara/i, TOP, { brand: 'Kylie Cosmetics', exclude: /Mini|Deluxe|Set|Bundle|Pouch/ }),
+  T('www.manduka.com', 'Manduka', 'sports', /Mats|Props|Towels|Bags|Apparel/i),
+  T('www.therabody.com', 'Therabody', 'sports', /Theragun|RecoveryAir|SmartGoggles|Wave|PowerDot|TheraFace|Recovery/i, TOP, { brand: 'Therabody', exclude: /Refurb|Stand|Bundle|Attachment|Case|Charger/ }),
+  T('www.trxtraining.com', 'TRX', 'sports', /Suspension|Kettlebell|Bands|Mat|Rope|Slam Ball|Dumbbell|Bar/i, TOP, { brand: 'TRX', exclude: /Course|Certification|Subscription|Bundle|App|Ohio|Camo/i }),
+  T('www.outdoorvoices.com', 'Outdoor Voices', 'sports', /Shorts|Sports Bras|Skorts/),
+  T('www.melissaanddoug.com', 'Melissa & Doug', 'kids', /Puzzle|Blocks|Play|Craft|Learning|Plush|Vehicle|Dress Up|Bath|Sticker|Games/i),
+  T('www.radioflyer.com', 'Radio Flyer', 'kids', /Ride-On|Wagon|Tricycle|Scooter|Bike|Walker|Play/i, TOP, { exclude: /Cover|Mesh|Adapter|Caddy|Accessory|Bag|Cushion|Canopy|Replacement/i }),
+  T('www.playosmo.com', 'Osmo', 'kids', /./, TOP, { brand: 'Osmo', exclude: /Reflector|Costume|Case|Adapter/ }),
+  T('shop.mattel.com', 'Mattel', 'kids', /Fisher-Price|Little People|Hot Wheels|Barbie|UNO|Mega|Thomas|Polly|Matchbox|Bluey/i, TOP, { brandMap: {} }),
+  T('www.allbirds.com', 'Allbirds', 'kids', /Smallbirds/),
   // kids
   S('www.melissaanddoug.com', 'Melissa & Doug', 'kids', ['ms-rachel-bubble-bubble-pop-sort-stack-count-nesting-blocks', 'dinosaur-adventure-track-floor-puzzle', 'ms-rachel-alphabet-phonics-puzzle', /Doctor/], { kw: 'toys toddler learning wooden' }),
   S('www.radioflyer.com', 'Radio Flyer', 'kids', ['scoot-2-scooter-1', 'push-pull-walker-wagon-teddy-bear', /Classic Red Wagon/, /My 1st Balance Bike/], { kw: 'toys ride on outdoor wagon' }),
@@ -149,7 +173,7 @@ async function shopifyList(host) {
   }
   return (shopifyCache[host] = all);
 }
-const notBundle = p => !/bundle|duo|trio|set of|gift|sample|refurb|mystery|subscription|test /i.test(p.title) && !/bundle|refurb/i.test(p.product_type || '');
+const notBundle = p => !/bundle|duo|trio|set of|gift|sample|refurb|mystery|subscription|test |replacement|refill|spare part|protection plan|warranty|e-gift|donation|\bclip\b/i.test(p.title) && !/bundle|refurb|replacement|accessories & replacement/i.test(p.product_type || '');
 async function fromShopify(e) {
   const list = await shopifyList(e.host), out = [];
   for (const pick of e.picks) {
@@ -182,6 +206,8 @@ async function fromOg(e) {
   return [{ brand: e.brand, title: e.title, price: priceMeta > e.price * 0.3 && priceMeta < e.price * 3 ? priceMeta : e.price, currency: 'USD', image: squarify(new URL(image, e.url).toString()), url: e.url, merchant: e.merchant, category: e.category, keywords: [...words(e.brand + ' ' + e.title), ...words(e.kw)] }];
 }
 
+async function pool(items, n, fn) { const out = new Array(items.length); let i = 0; await Promise.all(Array.from({ length: Math.min(n, items.length) }, async () => { for (let k; (k = i++) < items.length;) out[k] = await fn(items[k]); })); return out; }
+
 // ---------- Main ----------
 const byCat = {}, seen = new Set();
 const previous = existsSync(join(ROOT, 'data')) ? readdirSync(join(ROOT, 'data')).filter(f => f.endsWith('.json')).flatMap(f => JSON.parse(readFileSync(join(ROOT, 'data', f), 'utf8'))) : [];
@@ -192,14 +218,11 @@ for (const e of SPEC) {
     const kept = previous.find(p => p.url === e.url); if (kept) { console.warn(`  KEEP ${e.host || e.url}: ${err.message} — reusing previous record`); items = [{ ...kept, _kept: true }]; }
     else { console.warn(`  FAIL ${e.kind} ${e.host || e.url}: ${err.message}`); continue; }
   }
-  for (const p of items) {
-    const key = (p.category + '|' + p.brand + '|' + p.title).toLowerCase();   // colour/size variants share a title → keep the first
-    if (seen.has(key)) continue; seen.add(key);
-    if (p._kept) delete p._kept;   // image was verified when it was originally collected; its CDN may block this runner
-    else if (!(await isImage(p.image))) { console.warn(`  FAIL image failed: ${p.brand} ${p.title} ${p.image.slice(0, 80)}`); continue; }
-    (byCat[p.category] ||= []).push(p);
-    console.log(`  OK   ${p.category.padEnd(11)} ${p.brand} · ${p.title.slice(0, 48)} · $${p.price}`);
-  }
+  items = items.filter(p => p.price >= 3).map(p => ({ ...p, keywords: p.keywords.slice(0, 12) }));
+  const fresh = items.filter(p => { const key = (p.category + '|' + p.brand + '|' + p.title).toLowerCase(); if (seen.has(key)) return false; seen.add(key); return true; });   // colour/size variants share a title → keep the first
+  // verify images with limited concurrency (8 at a time) — a kept record's image was verified when it was originally collected
+  const checked = await pool(fresh, 8, async p => { if (p._kept) { delete p._kept; return p; } if (await isImage(p.image)) return p; console.warn(`  FAIL image failed: ${p.brand} ${p.title} ${p.image.slice(0, 80)}`); return null; });
+  for (const p of checked.filter(Boolean)) { (byCat[p.category] ||= []).push(p); console.log(`  OK   ${p.category.padEnd(11)} ${p.brand} · ${p.title.slice(0, 48)} · $${p.price}`); }
 }
 let total = 0;
 mkdirSync(join(ROOT, 'data'), { recursive: true });
@@ -208,7 +231,7 @@ for (const [cat, list] of Object.entries(byCat)) {
   if (!v.ok && v.products.length) v = validateProducts(v.products, cat);   // drop the odd bad row, keep the rest
   const prevFile = join(ROOT, 'data', `${cat}.json`), prev = existsSync(prevFile) ? JSON.parse(readFileSync(prevFile, 'utf8')) : [];
   if (!v.ok || v.products.length < Math.max(5, Math.floor(prev.length * 0.6))) { console.error(`KEEP ${cat}: run returned ${v.products.length} valid products (previous ${prev.length}) — keeping previous file`); total += prev.length; continue; }
-  if (!DRY) writeFileSync(join(ROOT, 'data', `${cat}.json`), JSON.stringify(v.products, null, 1) + '\n');
+  if (!DRY) writeFileSync(join(ROOT, 'data', `${cat}.json`), JSON.stringify(v.products) + '\n');   // compact: these files are fetched by every search
   total += v.products.length;
   console.log(`${cat}: ${v.products.length} products, ${v.stats.merchants} merchants${DRY ? ' (dry)' : ''}`);
 }

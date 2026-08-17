@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 21,
+   "products": 97,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -20,13 +20,31 @@
     "hiking",
     "kick",
     "slide"
+   ],
+   "brands": [
+    "adidas",
+    "allbirds",
+    "asics",
+    "camper",
+    "common projects",
+    "converse",
+    "jordan",
+    "maison margiela",
+    "melissa",
+    "new balance",
+    "nike",
+    "puma",
+    "rothy's",
+    "salomon",
+    "timberland",
+    "vans"
    ]
   },
   {
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 14,
+   "products": 145,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -48,14 +66,21 @@
     "coat",
     "outfit",
     "wear"
+   ],
+   "brands": [
+    "everlane",
+    "kith",
+    "madewell",
+    "outdoor voices",
+    "skims"
    ]
   },
   {
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 28,
-   "stores": 11,
+   "products": 433,
+   "stores": 13,
    "keywords": [
     "electronic",
     "gadget",
@@ -75,14 +100,29 @@
     "kindle",
     "watch",
     "smartwatch"
+   ],
+   "brands": [
+    "8bitdo",
+    "boox",
+    "garmin",
+    "hyperx",
+    "jlab",
+    "keychron",
+    "master & dynamic",
+    "mophie",
+    "nomad",
+    "satechi",
+    "skullcandy",
+    "twelve south",
+    "wyze"
    ]
   },
   {
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 20,
-   "stores": 9,
+   "products": 299,
+   "stores": 11,
    "keywords": [
     "home",
     "kitchen",
@@ -101,14 +141,27 @@
     "mixer",
     "light",
     "decor"
+   ],
+   "brands": [
+    "brooklinen",
+    "casper",
+    "ikea",
+    "kitchenaid",
+    "le creuset",
+    "lifx",
+    "nanoleaf",
+    "parachute",
+    "ridge",
+    "ruggable",
+    "stanley"
    ]
   },
   {
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 22,
-   "stores": 6,
+   "products": 253,
+   "stores": 7,
    "keywords": [
     "beauty",
     "skincare",
@@ -124,13 +177,25 @@
     "cosmetic",
     "cream",
     "brow"
+   ],
+   "brands": [
+    "colourpop",
+    "fenty beauty",
+    "fenty hair",
+    "fenty skin",
+    "glossier",
+    "kylie cosmetics",
+    "nami matcha",
+    "paula's choice",
+    "rare beauty",
+    "the ordinary"
    ]
   },
   {
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 23,
+   "products": 180,
    "stores": 8,
    "keywords": [
     "sport",
@@ -149,13 +214,23 @@
     "outdoor",
     "gps",
     "massage"
+   ],
+   "brands": [
+    "allbirds",
+    "manduka",
+    "outdoor voices",
+    "peloton",
+    "stanley",
+    "therabody",
+    "trx",
+    "wyze"
    ]
   },
   {
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 25,
+   "products": 175,
    "stores": 6,
    "keywords": [
     "kid",
@@ -171,6 +246,19 @@
     "learning",
     "school",
     "infant"
+   ],
+   "brands": [
+    "allbirds",
+    "hatch",
+    "kurt geiger",
+    "melissa & doug",
+    "merrell",
+    "ms. rachel x stride rite",
+    "osmo",
+    "radio flyer",
+    "saucony",
+    "stride rite",
+    "stride rite 360"
    ]
   }
  ]
