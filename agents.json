@@ -44,7 +44,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 145,
+   "products": 144,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -79,7 +79,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 433,
+   "products": 428,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -121,7 +121,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 299,
+   "products": 288,
    "stores": 11,
    "keywords": [
     "home",
@@ -230,7 +230,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 175,
+   "products": 173,
    "stores": 6,
    "keywords": [
     "kid",
