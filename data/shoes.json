@@ -37,27 +37,6 @@
   ]
  },
  {
-  "brand": "Converse",
-  "title": "Chuck Taylor All Star High Top",
-  "price": 65,
-  "currency": "USD",
-  "image": "https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw9895cd7b/images/a_107/M9160_A_107X1.jpg?sw=352&sh=352&sm=cut",
-  "url": "https://www.converse.com/shop/p/chuck-taylor-all-star-unisex-high-top-shoe/M9160.html",
-  "merchant": "Converse",
-  "category": "shoes",
-  "keywords": [
-   "converse",
-   "chuck",
-   "taylor",
-   "all",
-   "star",
-   "high",
-   "top",
-   "sneakers",
-   "canvas"
-  ]
- },
- {
   "brand": "Nike",
   "title": "Air Max 90",
   "price": 155,
