@@ -2,7 +2,7 @@
  "openapi": "3.1.0",
  "info": {
   "title": "OpenShelf",
-  "version": "2026-08-18",
+  "version": "2026-08-19",
   "summary": "The product index for AI agents",
   "description": "Static JSON product index. Fetch agents.json for categories, then data/{category}.json for products; filter and rank locally. No authentication."
  },
