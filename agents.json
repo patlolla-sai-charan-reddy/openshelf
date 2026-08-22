@@ -50,7 +50,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 150,
+   "products": 149,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -85,7 +85,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 436,
+   "products": 433,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -127,7 +127,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 303,
+   "products": 302,
    "stores": 11,
    "keywords": [
     "home",
@@ -201,7 +201,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 186,
+   "products": 185,
    "stores": 8,
    "keywords": [
     "sport",
@@ -256,6 +256,7 @@
    "brands": [
     "allbirds",
     "hatch",
+    "keds",
     "kurt geiger",
     "melissa & doug",
     "merrell",
