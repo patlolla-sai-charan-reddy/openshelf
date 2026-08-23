@@ -32,7 +32,6 @@
     "hoka",
     "jordan",
     "keen",
-    "melissa",
     "new balance",
     "nike",
     "nikeskims",
@@ -85,7 +84,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 433,
+   "products": 430,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -236,7 +235,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 174,
+   "products": 177,
    "stores": 6,
    "keywords": [
     "kid",
