@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 95,
+   "products": 94,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -31,7 +31,7 @@
     "hanwag",
     "hoka",
     "jordan",
-    "keen",
+    "melissa",
     "new balance",
     "nike",
     "nikeskims",
@@ -84,7 +84,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 430,
+   "products": 432,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -126,7 +126,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 302,
+   "products": 301,
    "stores": 11,
    "keywords": [
     "home",
@@ -235,7 +235,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 177,
+   "products": 175,
    "stores": 6,
    "keywords": [
     "kid",
