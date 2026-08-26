@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 94,
+   "products": 99,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -24,6 +24,7 @@
    "brands": [
     "adidas",
     "allbirds",
+    "arc'teryx",
     "asics",
     "birkenstock",
     "clarks",
@@ -32,14 +33,15 @@
     "hoka",
     "jordan",
     "kith",
+    "maison margiela",
     "new balance",
     "nike",
     "nikeskims",
     "puma",
     "rothy's",
     "salomon",
+    "satisfy",
     "saucony",
-    "timberland",
     "ugg",
     "vans"
    ]
@@ -48,7 +50,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 150,
+   "products": 149,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -83,7 +85,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 432,
+   "products": 462,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -125,7 +127,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 302,
+   "products": 308,
    "stores": 11,
    "keywords": [
     "home",
