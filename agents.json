@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 96,
+   "products": 98,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -26,11 +26,8 @@
     "allbirds",
     "arc'teryx",
     "asics",
-    "birkenstock",
-    "clarks",
     "converse",
     "dr. martens",
-    "hanwag",
     "hoka",
     "jordan",
     "kith",
@@ -39,6 +36,7 @@
     "new balance",
     "nike",
     "nikeskims",
+    "our legacy",
     "puma",
     "rothy's",
     "salomon",
@@ -52,7 +50,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 146,
+   "products": 137,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -87,7 +85,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 460,
+   "products": 457,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -129,7 +127,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 302,
+   "products": 306,
    "stores": 11,
    "keywords": [
     "home",
@@ -203,7 +201,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 186,
+   "products": 187,
    "stores": 8,
    "keywords": [
     "sport",
@@ -238,7 +236,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 179,
+   "products": 177,
    "stores": 6,
    "keywords": [
     "kid",
