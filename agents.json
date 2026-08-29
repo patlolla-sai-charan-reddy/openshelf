@@ -50,7 +50,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 137,
+   "products": 142,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -201,7 +201,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 187,
+   "products": 186,
    "stores": 8,
    "keywords": [
     "sport",
@@ -236,7 +236,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 177,
+   "products": 175,
    "stores": 6,
    "keywords": [
     "kid",
