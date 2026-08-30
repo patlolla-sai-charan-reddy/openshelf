@@ -50,7 +50,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 142,
+   "products": 154,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -85,7 +85,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 457,
+   "products": 458,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -127,7 +127,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 306,
+   "products": 304,
    "stores": 11,
    "keywords": [
     "home",
@@ -257,6 +257,7 @@
     "allbirds",
     "hatch",
     "keds",
+    "kurt geiger",
     "melissa & doug",
     "merrell",
     "ms. rachel x stride rite",
