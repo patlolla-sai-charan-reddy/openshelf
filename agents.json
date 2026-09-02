@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 97,
+   "products": 98,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -28,14 +28,13 @@
     "asics",
     "converse",
     "dr. martens",
-    "hoka",
+    "havaianas",
     "jordan",
     "kith",
     "maison margiela",
     "margiela",
     "new balance",
     "nike",
-    "nikeskims",
     "our legacy",
     "puma",
     "rothy's",
@@ -49,7 +48,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 163,
+   "products": 162,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -84,7 +83,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 455,
+   "products": 452,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -126,7 +125,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 304,
+   "products": 305,
    "stores": 11,
    "keywords": [
     "home",
@@ -165,7 +164,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 256,
+   "products": 254,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -200,7 +199,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 186,
+   "products": 188,
    "stores": 8,
    "keywords": [
     "sport",
@@ -235,7 +234,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 178,
+   "products": 180,
    "stores": 6,
    "keywords": [
     "kid",
