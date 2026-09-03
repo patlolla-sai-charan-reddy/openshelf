@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 98,
+   "products": 96,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -28,7 +28,6 @@
     "asics",
     "converse",
     "dr. martens",
-    "havaianas",
     "jordan",
     "kith",
     "maison margiela",
@@ -48,7 +47,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 162,
+   "products": 143,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -83,7 +82,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 452,
+   "products": 453,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -234,7 +233,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 180,
+   "products": 179,
    "stores": 6,
    "keywords": [
     "kid",
