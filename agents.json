@@ -34,12 +34,12 @@
     "margiela",
     "new balance",
     "nike",
+    "on running",
     "our legacy",
     "puma",
     "rothy's",
     "salomon",
     "saucony",
-    "ugg",
     "vans"
    ]
   },
@@ -47,7 +47,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 143,
+   "products": 137,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -82,7 +82,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 453,
+   "products": 452,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -124,7 +124,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 305,
+   "products": 308,
    "stores": 11,
    "keywords": [
     "home",
@@ -163,7 +163,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 254,
+   "products": 285,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -183,8 +183,8 @@
    ],
    "brands": [
     "colourpop",
+    "fenty",
     "fenty beauty",
-    "fenty hair",
     "fenty skin",
     "glossier",
     "kylie cosmetics",
@@ -253,7 +253,6 @@
    "brands": [
     "allbirds",
     "hatch",
-    "keds",
     "kurt geiger",
     "melissa & doug",
     "merrell",
