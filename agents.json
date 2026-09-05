@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 96,
+   "products": 100,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -28,8 +28,8 @@
     "asics",
     "converse",
     "dr. martens",
+    "havaianas",
     "jordan",
-    "kith",
     "maison margiela",
     "margiela",
     "new balance",
@@ -47,7 +47,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 137,
+   "products": 139,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -82,7 +82,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 452,
+   "products": 453,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -124,7 +124,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 308,
+   "products": 309,
    "stores": 11,
    "keywords": [
     "home",
@@ -183,7 +183,6 @@
    ],
    "brands": [
     "colourpop",
-    "fenty",
     "fenty beauty",
     "fenty skin",
     "glossier",
@@ -233,7 +232,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 179,
+   "products": 178,
    "stores": 6,
    "keywords": [
     "kid",
