@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 101,
+   "products": 102,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -82,7 +82,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 454,
+   "products": 451,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -258,8 +258,7 @@
     "osmo",
     "radio flyer",
     "saucony",
-    "stride rite",
-    "stride rite 360"
+    "stride rite"
    ]
   }
  ]
