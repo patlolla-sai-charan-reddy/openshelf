@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 102,
+   "products": 98,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -82,7 +82,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 449,
+   "products": 450,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -124,7 +124,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 309,
+   "products": 305,
    "stores": 11,
    "keywords": [
     "home",
@@ -197,7 +197,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 188,
+   "products": 184,
    "stores": 8,
    "keywords": [
     "sport",
@@ -232,7 +232,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 187,
+   "products": 180,
    "stores": 6,
    "keywords": [
     "kid",
@@ -252,13 +252,13 @@
    "brands": [
     "allbirds",
     "hatch",
-    "kurt geiger",
     "melissa & doug",
     "merrell",
     "osmo",
     "radio flyer",
     "saucony",
-    "stride rite"
+    "stride rite",
+    "stride rite 360"
    ]
   }
  ]
