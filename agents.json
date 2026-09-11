@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 98,
+   "products": 95,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -26,26 +26,25 @@
     "allbirds",
     "asics",
     "converse",
-    "dr. martens",
+    "crocs",
     "havaianas",
     "jordan",
-    "margiela",
     "new balance",
     "nike",
+    "nikeskims",
     "on running",
-    "our legacy",
     "puma",
     "rothy's",
     "salomon",
     "saucony",
-    "vans"
+    "ugg"
    ]
   },
   {
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 133,
+   "products": 130,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -80,7 +79,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 436,
+   "products": 437,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -122,7 +121,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 306,
+   "products": 304,
    "stores": 11,
    "keywords": [
     "home",
@@ -161,7 +160,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 285,
+   "products": 284,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -182,7 +181,7 @@
    "brands": [
     "colourpop",
     "fenty beauty",
-    "fenty skin",
+    "fourth ray beauty",
     "glossier",
     "kylie cosmetics",
     "nami matcha",
@@ -230,8 +229,8 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 182,
-   "stores": 6,
+   "products": 125,
+   "stores": 5,
    "keywords": [
     "kid",
     "child",
@@ -253,7 +252,6 @@
     "melissa & doug",
     "merrell",
     "osmo",
-    "radio flyer",
     "saucony",
     "stride rite",
     "stride rite 360"
