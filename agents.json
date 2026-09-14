@@ -44,8 +44,8 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 129,
-   "stores": 5,
+   "products": 89,
+   "stores": 4,
    "keywords": [
     "clothing",
     "clothe",
@@ -69,7 +69,6 @@
    ],
    "brands": [
     "everlane",
-    "kith",
     "madewell",
     "outdoor voices",
     "skims"
@@ -79,7 +78,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 435,
+   "products": 434,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -229,7 +228,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 190,
+   "products": 189,
    "stores": 6,
    "keywords": [
     "kid",
