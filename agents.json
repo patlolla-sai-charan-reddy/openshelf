@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 95,
+   "products": 96,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -44,8 +44,8 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 89,
-   "stores": 4,
+   "products": 130,
+   "stores": 5,
    "keywords": [
     "clothing",
     "clothe",
@@ -69,6 +69,7 @@
    ],
    "brands": [
     "everlane",
+    "kith",
     "madewell",
     "outdoor voices",
     "skims"
@@ -120,7 +121,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 305,
+   "products": 300,
    "stores": 11,
    "keywords": [
     "home",
@@ -228,8 +229,8 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 189,
-   "stores": 6,
+   "products": 187,
+   "stores": 5,
    "keywords": [
     "kid",
     "child",
@@ -246,8 +247,8 @@
     "infant"
    ],
    "brands": [
-    "allbirds",
     "hatch",
+    "kurt geiger",
     "melissa & doug",
     "merrell",
     "osmo",
