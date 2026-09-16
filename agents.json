@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 96,
+   "products": 97,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -28,6 +28,7 @@
     "converse",
     "crocs",
     "jordan",
+    "maison margiela",
     "new balance",
     "nike",
     "nikeskims",
@@ -44,7 +45,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 130,
+   "products": 135,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -79,7 +80,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 434,
+   "products": 437,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -121,7 +122,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 300,
+   "products": 299,
    "stores": 11,
    "keywords": [
     "home",
@@ -248,7 +249,6 @@
    ],
    "brands": [
     "hatch",
-    "kurt geiger",
     "melissa & doug",
     "merrell",
     "osmo",
