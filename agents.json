@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 97,
+   "products": 98,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -31,7 +31,6 @@
     "maison margiela",
     "new balance",
     "nike",
-    "nikeskims",
     "on running",
     "puma",
     "rick owens",
@@ -45,7 +44,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 135,
+   "products": 154,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -80,7 +79,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 437,
+   "products": 445,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -122,7 +121,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 299,
+   "products": 286,
    "stores": 11,
    "keywords": [
     "home",
@@ -161,7 +160,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 284,
+   "products": 283,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -230,7 +229,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 187,
+   "products": 185,
    "stores": 5,
    "keywords": [
     "kid",
