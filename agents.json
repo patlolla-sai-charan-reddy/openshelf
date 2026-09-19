@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 95,
+   "products": 94,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -26,25 +26,27 @@
     "allbirds",
     "asics",
     "converse",
-    "crocs",
     "jordan",
+    "kith",
     "maison margiela",
     "new balance",
     "nike",
+    "nikeskims",
     "on running",
     "puma",
     "rick owens",
     "rothy's",
     "salomon",
     "saucony",
-    "ugg"
+    "ugg",
+    "vans"
    ]
   },
   {
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 119,
+   "products": 121,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -79,7 +81,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 441,
+   "products": 444,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -121,7 +123,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 298,
+   "products": 304,
    "stores": 11,
    "keywords": [
     "home",
@@ -160,8 +162,8 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 176,
-   "stores": 5,
+   "products": 284,
+   "stores": 7,
    "keywords": [
     "beauty",
     "skincare",
@@ -180,10 +182,13 @@
    ],
    "brands": [
     "colourpop",
+    "fenty beauty",
     "fourth ray beauty",
     "glossier",
     "kylie cosmetics",
+    "nami matcha",
     "paula's choice",
+    "rare beauty",
     "the ordinary"
    ]
   },
@@ -191,8 +196,8 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 158,
-   "stores": 7,
+   "products": 185,
+   "stores": 8,
    "keywords": [
     "sport",
     "fitness",
@@ -217,6 +222,7 @@
     "outdoor voices",
     "peloton",
     "stanley",
+    "therabody",
     "trx",
     "wyze"
    ]
@@ -225,7 +231,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 185,
+   "products": 184,
    "stores": 5,
    "keywords": [
     "kid",
@@ -244,7 +250,6 @@
    ],
    "brands": [
     "hatch",
-    "kurt geiger",
     "melissa & doug",
     "merrell",
     "osmo",
