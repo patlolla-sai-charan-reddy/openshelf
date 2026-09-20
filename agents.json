@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 94,
+   "products": 93,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -46,7 +46,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 121,
+   "products": 149,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -81,7 +81,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 444,
+   "products": 443,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -123,7 +123,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 304,
+   "products": 292,
    "stores": 11,
    "keywords": [
     "home",
@@ -231,7 +231,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 184,
+   "products": 182,
    "stores": 5,
    "keywords": [
     "kid",
@@ -250,6 +250,7 @@
    ],
    "brands": [
     "hatch",
+    "kurt geiger",
     "melissa & doug",
     "merrell",
     "osmo",
