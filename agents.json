@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 94,
+   "products": 95,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -25,6 +25,8 @@
     "adidas",
     "allbirds",
     "asics",
+    "black suede studio",
+    "camper",
     "converse",
     "jordan",
     "kith",
@@ -46,7 +48,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 128,
+   "products": 127,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -81,7 +83,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 440,
+   "products": 438,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -123,7 +125,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 310,
+   "products": 306,
    "stores": 11,
    "keywords": [
     "home",
