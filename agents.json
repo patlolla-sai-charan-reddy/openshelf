@@ -24,7 +24,6 @@
    "brands": [
     "adidas",
     "allbirds",
-    "asics",
     "black suede studio",
     "camper",
     "converse",
@@ -48,7 +47,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 127,
+   "products": 133,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -83,7 +82,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 438,
+   "products": 435,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -198,7 +197,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 185,
+   "products": 186,
    "stores": 8,
    "keywords": [
     "sport",
@@ -233,7 +232,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 184,
+   "products": 181,
    "stores": 5,
    "keywords": [
     "kid",
