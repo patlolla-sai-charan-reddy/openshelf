@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 95,
+   "products": 96,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -23,22 +23,22 @@
    ],
    "brands": [
     "adidas",
+    "alexander wang",
     "allbirds",
+    "asics",
     "black suede studio",
     "camper",
     "converse",
+    "dr. martens",
     "jordan",
     "kith",
-    "maison margiela",
     "new balance",
     "nike",
     "nikeskims",
     "on running",
     "puma",
-    "rick owens",
     "rothy's",
     "salomon",
-    "saucony",
     "ugg",
     "vans"
    ]
@@ -47,7 +47,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 133,
+   "products": 135,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -82,7 +82,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 435,
+   "products": 439,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -163,7 +163,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 284,
+   "products": 286,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -184,6 +184,8 @@
    "brands": [
     "colourpop",
     "fenty beauty",
+    "fenty hair",
+    "fenty skin",
     "fourth ray beauty",
     "glossier",
     "kylie cosmetics",
@@ -197,7 +199,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 186,
+   "products": 185,
    "stores": 8,
    "keywords": [
     "sport",
@@ -232,7 +234,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 181,
+   "products": 180,
    "stores": 5,
    "keywords": [
     "kid",
