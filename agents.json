@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 101,
+   "products": 102,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -33,12 +33,10 @@
     "jordan",
     "new balance",
     "nike",
-    "nikeskims",
     "on running",
     "puma",
     "rothy's",
     "salomon",
-    "ugg",
     "vans"
    ]
   },
@@ -46,7 +44,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 134,
+   "products": 133,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -81,7 +79,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 435,
+   "products": 436,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -233,7 +231,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 181,
+   "products": 182,
    "stores": 6,
    "keywords": [
     "kid",
