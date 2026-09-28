@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 102,
+   "products": 104,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -44,7 +44,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 133,
+   "products": 134,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -79,7 +79,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 436,
+   "products": 434,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -121,7 +121,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 310,
+   "products": 308,
    "stores": 11,
    "keywords": [
     "home",
@@ -196,7 +196,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 185,
+   "products": 187,
    "stores": 8,
    "keywords": [
     "sport",
@@ -231,8 +231,8 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 182,
-   "stores": 6,
+   "products": 124,
+   "stores": 5,
    "keywords": [
     "kid",
     "child",
@@ -255,7 +255,6 @@
     "melissa & doug",
     "merrell",
     "osmo",
-    "radio flyer",
     "saucony",
     "stride rite",
     "stride rite 360"
