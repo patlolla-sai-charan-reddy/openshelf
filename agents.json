@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 116,
+   "products": 117,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -37,6 +37,7 @@
     "rick owens",
     "rothy's",
     "salomon",
+    "saucony",
     "vans"
    ]
   },
@@ -44,7 +45,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 102,
+   "products": 106,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -79,7 +80,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 434,
+   "products": 433,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -121,7 +122,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 311,
+   "products": 314,
    "stores": 11,
    "keywords": [
     "home",
@@ -230,7 +231,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 182,
+   "products": 190,
    "stores": 6,
    "keywords": [
     "kid",
