@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 117,
+   "products": 118,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -80,7 +80,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 433,
+   "products": 450,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -231,7 +231,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 190,
+   "products": 185,
    "stores": 6,
    "keywords": [
     "kid",
