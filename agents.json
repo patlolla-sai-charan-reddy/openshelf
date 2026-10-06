@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 115,
+   "products": 106,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -26,8 +26,9 @@
     "allbirds",
     "asics",
     "converse",
-    "dr. martens",
+    "isabel marant",
     "jordan",
+    "kith",
     "merrell",
     "new balance",
     "nike",
@@ -36,15 +37,15 @@
     "red wing",
     "rick owens",
     "rothy's",
-    "saucony",
-    "vans"
+    "vans",
+    "vinny's"
    ]
   },
   {
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 105,
+   "products": 149,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -79,7 +80,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 453,
+   "products": 435,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -195,7 +196,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 187,
+   "products": 188,
    "stores": 8,
    "keywords": [
     "sport",
@@ -230,7 +231,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 183,
+   "products": 185,
    "stores": 6,
    "keywords": [
     "kid",
