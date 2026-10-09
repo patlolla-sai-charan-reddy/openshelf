@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 100,
+   "products": 109,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -24,6 +24,7 @@
    "brands": [
     "adidas",
     "allbirds",
+    "asics",
     "black suede studio",
     "converse",
     "isabel marant",
@@ -36,6 +37,7 @@
     "puma",
     "rick owens",
     "rothy's",
+    "salomon",
     "saucony",
     "solovair",
     "vans",
@@ -46,7 +48,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 172,
+   "products": 134,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -81,7 +83,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 441,
+   "products": 437,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -123,7 +125,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 311,
+   "products": 321,
    "stores": 11,
    "keywords": [
     "home",
@@ -197,7 +199,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 187,
+   "products": 186,
    "stores": 8,
    "keywords": [
     "sport",
@@ -232,7 +234,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 186,
+   "products": 184,
    "stores": 6,
    "keywords": [
     "kid",
