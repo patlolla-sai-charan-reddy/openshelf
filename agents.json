@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 105,
+   "products": 104,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -27,6 +27,7 @@
     "asics",
     "converse",
     "crocs",
+    "hoka",
     "jordan",
     "keen",
     "kith",
@@ -50,7 +51,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 157,
+   "products": 150,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -85,7 +86,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 438,
+   "products": 441,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -127,7 +128,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 311,
+   "products": 314,
    "stores": 11,
    "keywords": [
     "home",
@@ -166,7 +167,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 288,
+   "products": 289,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -201,7 +202,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 184,
+   "products": 185,
    "stores": 8,
    "keywords": [
     "sport",
@@ -236,7 +237,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 182,
+   "products": 183,
    "stores": 6,
    "keywords": [
     "kid",
