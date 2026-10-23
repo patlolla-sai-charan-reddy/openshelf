@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 104,
+   "products": 105,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -27,14 +27,15 @@
     "asics",
     "converse",
     "crocs",
+    "dr. martens",
+    "filling pieces",
     "hoka",
     "jordan",
-    "keen",
     "kith",
-    "merrell",
+    "loewe",
     "new balance",
     "nike",
-    "norda",
+    "nikeskims",
     "on running",
     "pennon",
     "puma",
@@ -42,7 +43,6 @@
     "roa",
     "rothy's",
     "salomon",
-    "stepney workers club",
     "timberland",
     "vans"
    ]
@@ -51,7 +51,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 150,
+   "products": 153,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -86,7 +86,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 441,
+   "products": 444,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -128,7 +128,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 314,
+   "products": 316,
    "stores": 11,
    "keywords": [
     "home",
@@ -237,7 +237,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 183,
+   "products": 182,
    "stores": 6,
    "keywords": [
     "kid",
