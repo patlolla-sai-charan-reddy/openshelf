@@ -40,15 +40,14 @@
     "rick owens",
     "rothy's",
     "salomon",
-    "timberland",
-    "vans"
+    "timberland"
    ]
   },
   {
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 146,
+   "products": 133,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -83,7 +82,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 443,
+   "products": 441,
    "stores": 13,
    "keywords": [
     "electronic",
