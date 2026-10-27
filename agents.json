@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 103,
+   "products": 107,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -26,21 +26,23 @@
     "allbirds",
     "asics",
     "converse",
-    "crocs",
     "dr. martens",
     "filling pieces",
     "hoka",
     "jordan",
+    "kith",
     "loewe",
     "new balance",
     "nike",
     "nikeskims",
     "on running",
+    "paris texas",
     "puma",
-    "rick owens",
     "rothy's",
     "salomon",
-    "timberland"
+    "timberland",
+    "ugg",
+    "vans"
    ]
   },
   {
@@ -82,7 +84,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 441,
+   "products": 444,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -124,7 +126,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 315,
+   "products": 313,
    "stores": 11,
    "keywords": [
     "home",
@@ -233,7 +235,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 182,
+   "products": 183,
    "stores": 6,
    "keywords": [
     "kid",
