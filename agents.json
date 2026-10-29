@@ -27,7 +27,6 @@
     "asics",
     "converse",
     "dr. martens",
-    "filling pieces",
     "jordan",
     "kith",
     "new balance",
@@ -35,6 +34,7 @@
     "on running",
     "paris texas",
     "puma",
+    "ranra",
     "rick owens",
     "rothy's",
     "salomon",
@@ -47,7 +47,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 152,
+   "products": 153,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -82,7 +82,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 455,
+   "products": 454,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -124,7 +124,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 312,
+   "products": 311,
    "stores": 11,
    "keywords": [
     "home",
@@ -233,7 +233,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 179,
+   "products": 182,
    "stores": 6,
    "keywords": [
     "kid",
