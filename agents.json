@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 103,
+   "products": 101,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -25,6 +25,7 @@
     "adidas",
     "alexander wang",
     "allbirds",
+    "arc'teryx",
     "asics",
     "converse",
     "crocs",
@@ -32,7 +33,6 @@
     "kith",
     "new balance",
     "nike",
-    "paris texas",
     "puma",
     "ranra",
     "rick owens",
@@ -45,7 +45,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 134,
+   "products": 135,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -195,7 +195,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 184,
+   "products": 183,
    "stores": 8,
    "keywords": [
     "sport",
@@ -230,7 +230,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 181,
+   "products": 180,
    "stores": 5,
    "keywords": [
     "kid",
