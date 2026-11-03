@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 101,
+   "products": 96,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -27,17 +27,22 @@
     "allbirds",
     "arc'teryx",
     "asics",
+    "clarks",
     "converse",
     "crocs",
+    "filling pieces",
     "jordan",
     "kith",
+    "mm6 maison margiela",
     "new balance",
     "nike",
+    "norda",
+    "on running",
     "puma",
-    "ranra",
-    "rick owens",
     "rothy's",
     "salomon",
+    "saucony",
+    "ugg",
     "vans"
    ]
   },
@@ -45,7 +50,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 135,
+   "products": 137,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -80,7 +85,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 450,
+   "products": 448,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -161,7 +166,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 288,
+   "products": 287,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -195,7 +200,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 183,
+   "products": 184,
    "stores": 8,
    "keywords": [
     "sport",
@@ -230,7 +235,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 180,
+   "products": 178,
    "stores": 5,
    "keywords": [
     "kid",
