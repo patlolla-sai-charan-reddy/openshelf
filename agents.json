@@ -23,7 +23,6 @@
    ],
    "brands": [
     "adidas",
-    "alexander wang",
     "allbirds",
     "arc'teryx",
     "asics",
@@ -33,12 +32,14 @@
     "filling pieces",
     "jordan",
     "kith",
+    "merrell",
     "mm6 maison margiela",
     "new balance",
     "nike",
     "norda",
     "on running",
     "puma",
+    "rains",
     "rothy's",
     "salomon",
     "saucony",
@@ -50,8 +51,8 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 137,
-   "stores": 5,
+   "products": 111,
+   "stores": 4,
    "keywords": [
     "clothing",
     "clothe",
@@ -74,7 +75,6 @@
     "wear"
    ],
    "brands": [
-    "everlane",
     "kith",
     "madewell",
     "outdoor voices",
@@ -85,7 +85,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 448,
+   "products": 440,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -127,8 +127,8 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 311,
-   "stores": 11,
+   "products": 299,
+   "stores": 10,
    "keywords": [
     "home",
     "kitchen",
@@ -157,7 +157,6 @@
     "lifx",
     "nanoleaf",
     "parachute",
-    "ridge",
     "ruggable",
     "stanley"
    ]
@@ -200,7 +199,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 184,
+   "products": 185,
    "stores": 8,
    "keywords": [
     "sport",
@@ -235,7 +234,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 178,
+   "products": 191,
    "stores": 5,
    "keywords": [
     "kid",
