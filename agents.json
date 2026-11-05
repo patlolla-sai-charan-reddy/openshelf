@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 96,
+   "products": 97,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -24,7 +24,6 @@
    "brands": [
     "adidas",
     "allbirds",
-    "arc'teryx",
     "asics",
     "clarks",
     "converse",
@@ -51,8 +50,8 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 111,
-   "stores": 4,
+   "products": 133,
+   "stores": 5,
    "keywords": [
     "clothing",
     "clothe",
@@ -75,6 +74,7 @@
     "wear"
    ],
    "brands": [
+    "everlane",
     "kith",
     "madewell",
     "outdoor voices",
@@ -85,7 +85,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 440,
+   "products": 450,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -127,8 +127,8 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 299,
-   "stores": 10,
+   "products": 308,
+   "stores": 11,
    "keywords": [
     "home",
     "kitchen",
@@ -157,6 +157,7 @@
     "lifx",
     "nanoleaf",
     "parachute",
+    "ridge",
     "ruggable",
     "stanley"
    ]
@@ -165,7 +166,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 287,
+   "products": 286,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -199,7 +200,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 185,
+   "products": 186,
    "stores": 8,
    "keywords": [
     "sport",
@@ -234,7 +235,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 191,
+   "products": 194,
    "stores": 5,
    "keywords": [
     "kid",
