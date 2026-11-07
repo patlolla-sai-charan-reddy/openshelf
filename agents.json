@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 101,
+   "products": 103,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -24,13 +24,12 @@
    "brands": [
     "adidas",
     "allbirds",
-    "arc'teryx",
-    "asics",
     "clarks",
     "converse",
     "filling pieces",
     "jordan",
     "keen",
+    "kith women",
     "marsèll",
     "merrell",
     "mm6 maison margiela",
@@ -52,7 +51,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 132,
+   "products": 134,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -87,7 +86,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 452,
+   "products": 450,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -129,7 +128,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 303,
+   "products": 305,
    "stores": 11,
    "keywords": [
     "home",
@@ -168,7 +167,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 288,
+   "products": 289,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -237,7 +236,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 195,
+   "products": 182,
    "stores": 5,
    "keywords": [
     "kid",
