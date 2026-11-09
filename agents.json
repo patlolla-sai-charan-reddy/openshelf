@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 102,
+   "products": 106,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -29,6 +29,7 @@
     "filling pieces",
     "jordan",
     "keen",
+    "kith",
     "kith women",
     "marsèll",
     "merrell",
@@ -86,7 +87,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 448,
+   "products": 449,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -128,7 +129,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 304,
+   "products": 303,
    "stores": 11,
    "keywords": [
     "home",
@@ -201,7 +202,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 193,
+   "products": 191,
    "stores": 8,
    "keywords": [
     "sport",
@@ -236,7 +237,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 180,
+   "products": 182,
    "stores": 5,
    "keywords": [
     "kid",
