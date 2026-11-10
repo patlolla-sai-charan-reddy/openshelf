@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 106,
+   "products": 102,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -24,26 +24,24 @@
    "brands": [
     "adidas",
     "allbirds",
-    "clarks",
+    "blackstock & weber",
     "converse",
-    "filling pieces",
+    "diemme",
     "jordan",
     "keen",
     "kith",
     "kith women",
     "marsèll",
     "merrell",
-    "mm6 maison margiela",
     "new balance",
     "nike",
-    "norda",
     "on running",
     "puma",
     "rains",
     "rothy's",
     "salomon",
     "satisfy",
-    "saucony",
+    "st. agni",
     "ugg",
     "vans"
    ]
@@ -52,7 +50,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 136,
+   "products": 134,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -87,7 +85,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 449,
+   "products": 451,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -129,7 +127,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 303,
+   "products": 305,
    "stores": 11,
    "keywords": [
     "home",
@@ -202,7 +200,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 191,
+   "products": 180,
    "stores": 8,
    "keywords": [
     "sport",
@@ -237,7 +235,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 182,
+   "products": 185,
    "stores": 5,
    "keywords": [
     "kid",
