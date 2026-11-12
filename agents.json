@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 102,
+   "products": 100,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -24,33 +24,34 @@
    "brands": [
     "adidas",
     "allbirds",
-    "blackstock & weber",
+    "asics",
+    "b.o.t.o.",
+    "clarks",
     "converse",
     "diemme",
+    "dr. martens",
+    "filling pieces",
+    "hoka",
     "jordan",
-    "keen",
-    "kith",
-    "kith women",
-    "marsèll",
-    "merrell",
+    "moon boot",
     "new balance",
     "nike",
+    "nikeskims",
     "on running",
     "puma",
-    "rains",
+    "rick owens",
     "rothy's",
     "salomon",
-    "satisfy",
-    "st. agni",
-    "ugg",
-    "vans"
+    "saucony",
+    "second/layer",
+    "timberland"
    ]
   },
   {
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 134,
+   "products": 104,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -127,7 +128,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 305,
+   "products": 310,
    "stores": 11,
    "keywords": [
     "home",
@@ -201,7 +202,7 @@
    "name": "Sports Index",
    "category": "sports",
    "products": 180,
-   "stores": 8,
+   "stores": 7,
    "keywords": [
     "sport",
     "fitness",
@@ -221,7 +222,6 @@
     "massage"
    ],
    "brands": [
-    "allbirds",
     "manduka",
     "outdoor voices",
     "peloton",
@@ -235,7 +235,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 185,
+   "products": 184,
    "stores": 5,
    "keywords": [
     "kid",
