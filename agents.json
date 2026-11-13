@@ -28,7 +28,6 @@
     "b.o.t.o.",
     "clarks",
     "converse",
-    "diemme",
     "dr. martens",
     "filling pieces",
     "hoka",
@@ -39,6 +38,7 @@
     "nikeskims",
     "on running",
     "puma",
+    "red wing",
     "rick owens",
     "rothy's",
     "salomon",
@@ -51,7 +51,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 104,
+   "products": 108,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -86,7 +86,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 451,
+   "products": 444,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -128,8 +128,8 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 310,
-   "stores": 11,
+   "products": 299,
+   "stores": 10,
    "keywords": [
     "home",
     "kitchen",
@@ -158,7 +158,6 @@
     "lifx",
     "nanoleaf",
     "parachute",
-    "ridge",
     "ruggable",
     "stanley"
    ]
@@ -167,7 +166,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 289,
+   "products": 288,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -235,7 +234,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 184,
+   "products": 187,
    "stores": 5,
    "keywords": [
     "kid",
