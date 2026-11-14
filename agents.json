@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 100,
+   "products": 99,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -24,18 +24,18 @@
    "brands": [
     "adidas",
     "allbirds",
+    "arc'teryx",
     "asics",
-    "b.o.t.o.",
     "clarks",
     "converse",
-    "dr. martens",
     "filling pieces",
     "hoka",
     "jordan",
+    "loewe",
+    "maison margiela",
+    "merrell",
     "moon boot",
-    "new balance",
     "nike",
-    "nikeskims",
     "on running",
     "puma",
     "red wing",
@@ -44,14 +44,15 @@
     "salomon",
     "saucony",
     "second/layer",
-    "timberland"
+    "timberland",
+    "vans"
    ]
   },
   {
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 108,
+   "products": 147,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -86,7 +87,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 444,
+   "products": 455,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -128,8 +129,8 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 299,
-   "stores": 10,
+   "products": 312,
+   "stores": 11,
    "keywords": [
     "home",
     "kitchen",
@@ -158,6 +159,7 @@
     "lifx",
     "nanoleaf",
     "parachute",
+    "ridge",
     "ruggable",
     "stanley"
    ]
@@ -166,7 +168,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 288,
+   "products": 280,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -200,7 +202,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 180,
+   "products": 182,
    "stores": 7,
    "keywords": [
     "sport",
@@ -234,7 +236,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 187,
+   "products": 185,
    "stores": 5,
    "keywords": [
     "kid",
