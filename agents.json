@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 99,
+   "products": 102,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -26,6 +26,7 @@
     "allbirds",
     "arc'teryx",
     "asics",
+    "blackstock & weber",
     "clarks",
     "converse",
     "filling pieces",
@@ -43,7 +44,6 @@
     "rothy's",
     "salomon",
     "saucony",
-    "second/layer",
     "timberland",
     "vans"
    ]
@@ -52,7 +52,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 147,
+   "products": 152,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -87,7 +87,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 455,
+   "products": 452,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -129,7 +129,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 312,
+   "products": 311,
    "stores": 11,
    "keywords": [
     "home",
@@ -168,7 +168,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 280,
+   "products": 289,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -202,7 +202,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 182,
+   "products": 184,
    "stores": 7,
    "keywords": [
     "sport",
@@ -236,7 +236,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 185,
+   "products": 189,
    "stores": 5,
    "keywords": [
     "kid",
