@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 106,
+   "products": 105,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -44,7 +44,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 125,
+   "products": 130,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -79,7 +79,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 454,
+   "products": 455,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -121,7 +121,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 308,
+   "products": 310,
    "stores": 11,
    "keywords": [
     "home",
