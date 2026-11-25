@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 106,
+   "products": 104,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -31,20 +31,19 @@
     "loewe",
     "new balance",
     "nike",
-    "pennon",
     "puma",
     "rick owens",
     "rothy's",
-    "salomon",
     "saucony",
-    "vans"
+    "vans",
+    "village pm"
    ]
   },
   {
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 130,
+   "products": 139,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -79,7 +78,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 455,
+   "products": 454,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -121,7 +120,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 311,
+   "products": 308,
    "stores": 11,
    "keywords": [
     "home",
@@ -160,7 +159,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 288,
+   "products": 287,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -194,7 +193,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 184,
+   "products": 183,
    "stores": 7,
    "keywords": [
     "sport",
@@ -228,7 +227,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 182,
+   "products": 184,
    "stores": 5,
    "keywords": [
     "kid",
