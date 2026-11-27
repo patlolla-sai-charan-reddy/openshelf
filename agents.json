@@ -5,7 +5,7 @@
    "id": "shoes",
    "name": "Shoes Index",
    "category": "shoes",
-   "products": 104,
+   "products": 103,
    "stores": 6,
    "keywords": [
     "shoe",
@@ -26,13 +26,13 @@
     "allbirds",
     "asics",
     "b.o.t.o.",
+    "common projects",
     "converse",
     "jordan",
     "loewe",
     "new balance",
     "nike",
     "puma",
-    "rick owens",
     "rothy's",
     "saucony",
     "vans",
@@ -43,7 +43,7 @@
    "id": "clothing",
    "name": "Clothing Index",
    "category": "clothing",
-   "products": 139,
+   "products": 140,
    "stores": 5,
    "keywords": [
     "clothing",
@@ -78,7 +78,7 @@
    "id": "electronics",
    "name": "Electronics Index",
    "category": "electronics",
-   "products": 454,
+   "products": 455,
    "stores": 13,
    "keywords": [
     "electronic",
@@ -120,7 +120,7 @@
    "id": "home",
    "name": "Home Index",
    "category": "home",
-   "products": 308,
+   "products": 307,
    "stores": 11,
    "keywords": [
     "home",
@@ -159,7 +159,7 @@
    "id": "beauty",
    "name": "Beauty Index",
    "category": "beauty",
-   "products": 287,
+   "products": 285,
    "stores": 7,
    "keywords": [
     "beauty",
@@ -193,7 +193,7 @@
    "id": "sports",
    "name": "Sports Index",
    "category": "sports",
-   "products": 183,
+   "products": 184,
    "stores": 7,
    "keywords": [
     "sport",
@@ -227,7 +227,7 @@
    "id": "kids",
    "name": "Kids Index",
    "category": "kids",
-   "products": 184,
+   "products": 178,
    "stores": 5,
    "keywords": [
     "kid",
